@@ -32,7 +32,7 @@ namespace ControleFinanceiroIgreja.GUI
 
         private void carregaStatus()
         {
-            DataTable dt = new CrudMembro().listaStatus(Conexao.con);
+            DataTable dt = new CrudMembro().listaSituacao(Conexao.con);
             this.listStatus.Clear();
             cbSituacao.Items.Clear();
 

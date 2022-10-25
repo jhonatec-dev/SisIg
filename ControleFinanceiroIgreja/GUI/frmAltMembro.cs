@@ -154,7 +154,7 @@ namespace ControleFinanceiroIgreja.GUI
 
                 //admissao e status
                 cbAdmissao.SelectedValue = membro.idAdmissao;
-                cbStatus.SelectedValue = membro.idStatus;
+                cbStatus.SelectedValue = membro.idSituacao;
             }
             else
             {
@@ -230,9 +230,9 @@ namespace ControleFinanceiroIgreja.GUI
 
 
             if (cbStatus.SelectedIndex < 0)
-                membro.idStatus = 0;
+                membro.idSituacao = 0;
             else
-                membro.idStatus = Convert.ToInt32(cbStatus.SelectedValue);
+                membro.idSituacao = Convert.ToInt32(cbStatus.SelectedValue);
 
             new CrudMembro().alteraMembro(Conexao.con, membro);
 
@@ -362,7 +362,7 @@ namespace ControleFinanceiroIgreja.GUI
 
         private void carregaStatus()
         {
-            DataTable dt = new CrudMembro().listaStatus(Conexao.con);
+            DataTable dt = new CrudMembro().listaSituacao(Conexao.con);
 
             cbStatus.DataSource = dt;
 

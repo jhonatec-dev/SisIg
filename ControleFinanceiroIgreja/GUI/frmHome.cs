@@ -69,7 +69,7 @@ namespace ControleFinanceiroIgreja.GUI
             {
                 Conexao.conectar();
 
-               /* ig = new CrudIgreja().lerIgreja(Conexao.con);
+               ig = new CrudIgreja().lerIgreja(Conexao.con);
                 frmLogin frmL = new frmLogin(ig.nome);
 
 
@@ -91,7 +91,7 @@ namespace ControleFinanceiroIgreja.GUI
                 login();
 
                 //ig = new CrudIgreja().lerIgreja(Conexao.con);
-                this.Text = ig.nome; */
+                this.Text = ig.nome; 
 
                 pnInicial.Visible = false;
 

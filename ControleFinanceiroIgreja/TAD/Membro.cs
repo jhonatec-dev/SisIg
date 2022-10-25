@@ -41,7 +41,7 @@ namespace ControleFinanceiroIgreja.TAD
 
         public int idAdmissao { get; set; }
 
-        public int idStatus { get; set; }
+        public int idSituacao { get; set; }
 
         public string admissao { get; set; }
 

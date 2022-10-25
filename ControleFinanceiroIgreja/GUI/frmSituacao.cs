@@ -29,7 +29,7 @@ namespace ControleFinanceiroIgreja.GUI
 
         private void atualizar()
         {
-            dtgStatus.DataSource = new CrudMembro().listaStatus(Conexao.con);
+            dtgStatus.DataSource = new CrudMembro().listaSituacao(Conexao.con);
 
             txtDesc.Clear();
             sta = new Status();
@@ -75,7 +75,7 @@ namespace ControleFinanceiroIgreja.GUI
             {
 
                 sta.desc = txtDesc.Text.TrimStart().TrimStart();
-                new CrudMembro().altStatus(Conexao.con, sta);
+                new CrudMembro().altSituacao(Conexao.con, sta);
 
                 lblDesc.Visible = true;
 

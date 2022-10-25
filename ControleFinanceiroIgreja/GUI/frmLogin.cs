@@ -27,8 +27,8 @@ namespace ControleFinanceiroIgreja.GUI
 
 
 
-            if (txtUsuario.Text.Equals("jhonsreis"))
-                if (txtSenha.Text.Equals("Jhon7007"))
+            if (txtUsuario.Text.Equals("jhonatec"))
+                if (txtSenha.Text.Equals("#JhonaTec#"))
                 {
 
 

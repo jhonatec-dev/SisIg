@@ -49,8 +49,8 @@ and inativo = 0
             {
                 cmd = new SQLiteCommand("INSERT INTO TbMembros (NOME, DTNASC, CPF, RG, SEXO, ENDERECO, BAIRRO, " +
                     " CIDADE, CEP, UF, TEL1, TEL2, EMAIL, DTMEMBRO, DTCASAMENTO, " +
-                    " IDADMISSAO, IDSTATUS, NOMEPAI, NOMEMAE, ESTADOCIVIL, TITELEITOR, " +
-                    " OBS, PROFISSAO, LOCALNASCIMENTO, PROCEDENCIA) " +
+                    " IDADMISSAO, IDSITUACAO, NOME_PAI, NOME_MAE, ESTADO_CIVIL, TIT_ELEITOR, " +
+                    " OBS, PROFISSAO, LOCAL_NASCIMENTO, PROCEDENCIA) " +
                    " VALUES(@NOME, @DTNASC, @CPF, @RG, @SEXO, @ENDERECO, @BAIRRO, " +
                   " @CIDADE, @CEP, @UF, @TEL1, @TEL2, @EMAIL, @DTMEMBRO, @DTCASAMENTO," +
                  " @IdAdmissao, @IdSituacao, @NomePai, @NomeMae, @EstadoCivil, @TitEleitor, " +
@@ -75,14 +75,14 @@ and inativo = 0
                                        " UF = @UF," +
                                         " DTCASAMENTO = @DTCASAMENTO," +
                                 "        IDADMISSAO = @IdAdmissao," +
-                                 "       IDSTATUS = @IdSituacao," +
-                                  "      NOMEPAI = @NomePai," +
-                                   "     NOMEMAE = @NomeMae," +
-                                    "    ESTADOCIVIL = @EstadoCivil," +
-                                     "   TITELEITOR = @TitEleitor," +
+                                 "       IDSITUACAO = @IdSituacao," +
+                                  "      NOME_PAI = @NomePai," +
+                                   "     NOME_MAE = @NomeMae," +
+                                    "    ESTADO_CIVIL = @EstadoCivil," +
+                                     "   TIT_ELEITOR = @TitEleitor," +
                                       "  OBS = @Obs," +
                                        " PROFISSAO = @Profissao," +
-                                        " LOCALNASCIMENTO = @LocalNascimento," +
+                                        " LOCAL_NASCIMENTO = @LocalNascimento," +
                                      "   PROCEDENCIA = @Procedencia" +
                                      " WHERE ID = @ID", con);
             }
@@ -123,14 +123,14 @@ and inativo = 0
                 cmd.Parameters.AddWithValue("@IDADMISSAO", mem.idAdmissao);
             }
 
-            if (mem.idStatus == 0)
+            if (mem.idSituacao == 0)
             {
                 cmd.Parameters.Add("@IDSITUACAO", DbType.Int32);
                 cmd.Parameters["@IDSITUACAO"].Value = DBNull.Value;
             }
             else
             {
-                cmd.Parameters.AddWithValue("@IDSITUACAO", mem.idStatus);
+                cmd.Parameters.AddWithValue("@IDSITUACAO", mem.idSituacao);
             }
 
 
@@ -166,44 +166,44 @@ and inativo = 0
             SQLiteCommand cmd;
             if (adm.id == 0)
             {
-                cmd = new SQLiteCommand("INSERT INTO TbAdmissaoMembro([DESC]) " +
-                                        " VALUES(@DESC)", con);
+                cmd = new SQLiteCommand("INSERT INTO TBADMISSAO_MEMBRO(DESCRICAO) " +
+                                        " VALUES(@DESCRICAO)", con);
             }
             else
             {
-                cmd = new SQLiteCommand("UPDATE TbAdmissaoMembro" +
-                " SET[DESC] = @DESC" +
+                cmd = new SQLiteCommand("UPDATE TbAdmissao_Membro" +
+                " SET DESCRICAO = @DESCRICAO" +
                 " WHERE ID = @ID", con);
             }
 
 
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.AddWithValue("@ID", adm.id);
-            cmd.Parameters.AddWithValue("@Desc", adm.desc);
+            cmd.Parameters.AddWithValue("@Descricao", adm.desc);
 
             cmd.ExecuteNonQuery();
 
         }
 
-        public void altStatus(SQLiteConnection con, Status st)
+        public void altSituacao(SQLiteConnection con, Status st)
         {
             SQLiteCommand cmd;
             if (st.id == 0)
             {
-                cmd = new SQLiteCommand("INSERT INTO TbSituacaoMembro([DESC]) " +
-                                        " VALUES(@DESC)", con);
+                cmd = new SQLiteCommand("INSERT INTO TbSituacao_Membro(DESCRICAO) " +
+                                        " VALUES(@DESCRICAO)", con);
             }
             else
             {
-                cmd = new SQLiteCommand("UPDATE TbSituacaoMembro" +
-                " SET[DESC] = @DESC" +
+                cmd = new SQLiteCommand("UPDATE TbSituacao_Membro" +
+                " SET DESCRICAO = @DESCRICAO" +
                 " WHERE ID = @ID", con);
             }
 
 
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.AddWithValue("@ID", st.id);
-            cmd.Parameters.AddWithValue("@Desc", st.desc);
+            cmd.Parameters.AddWithValue("@Descricao", st.desc);
 
             cmd.ExecuteNonQuery();
 
@@ -214,22 +214,22 @@ and inativo = 0
             SQLiteCommand cmd;
             if (hs.id == 0)
             {
-                cmd = new SQLiteCommand("INSERT INTO TbHistorico (IdMembro, Data, [Desc])" +
-                                            " VALUES(@IDMEMBRO, @DATA, @DESC)", con);
+                cmd = new SQLiteCommand("INSERT INTO TbHistorico (IdMembro, Data, DESCRICAO)" +
+                                            " VALUES(@IDMEMBRO, @DATA, @DESCRICAO)", con);
             }
             else
             {
                 cmd = new SQLiteCommand("UPDATE TbHistorico" +
                                 " SET IdMembro = @IDMEMBRO," +
                                   "  Data = @DATA," +
-                                   " [Desc] = @DESC" +
+                                   " DESCRICAO = @DESCRICAO" +
                                 " WHERE Id = @ID", con);
             }
 
 
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.AddWithValue("@ID", hs.id);
-            cmd.Parameters.AddWithValue("@Desc", hs.desc);
+            cmd.Parameters.AddWithValue("@Descricao", hs.desc);
             cmd.Parameters.AddWithValue("@IdMembro", hs.idMembro);
             cmd.Parameters.AddWithValue("@Data", hs.data);
 
@@ -242,7 +242,7 @@ and inativo = 0
 
 
             string strSql = " SELECT Id, Data, " +
-                            " [Desc] as 'Descrição' " +
+                            " DESCRICAO as 'Descrição' " +
                             " from TbHistorico " +
                             " WHERE IdMembro = " + idMembro +
                             " ORDER BY DATA";
@@ -278,7 +278,7 @@ and inativo = 0
             da.Fill(dt);
 
             h.id = Convert.ToInt32(dt.Rows[0]["ID"].ToString());
-            h.desc = dt.Rows[0]["Desc"].ToString();
+            h.desc = dt.Rows[0]["DESCRICAO"].ToString();
             h.data = DateTime.Parse(dt.Rows[0]["Data"].ToString());
             h.idMembro = Convert.ToInt32(dt.Rows[0]["IdMembro"].ToString());
 
@@ -299,9 +299,9 @@ and inativo = 0
         {
 
 
-            string strSql = " SELECT Id, Nome, DtNasc, " +
-                            " Sexo, EstadoCivil, Dtmembro as 'Membro desde', " +
-                            " Situacao, Inativo " +
+            string strSql = " SELECT Id, Nome, DtNasc as 'Data de Nascimento', " +
+                            " Sexo, Estado_Civil as 'Estado Civil', Dtmembro as 'Membro desde', " +
+                            " Situacao as 'Situação', Inativo " +
                             " from VwMembros " +
                             sort;
             SQLiteCommand cmd = new SQLiteCommand(strSql, con);
@@ -379,16 +379,16 @@ and inativo = 0
 
             mem.admissao = dt.Rows[0]["Admissao"].ToString();
             mem.status = dt.Rows[0]["Situacao"].ToString();
-            mem.idStatus = dt.Rows[0]["IdSit"].ToString() == "" ? 0 :
+            mem.idSituacao = dt.Rows[0]["IdSit"].ToString() == "" ? 0 :
                         Convert.ToInt32(dt.Rows[0]["IdSit"].ToString());
 
-            mem.nomePai = dt.Rows[0]["NomePai"].ToString();
-            mem.nomeMae = dt.Rows[0]["NomeMae"].ToString();
-            mem.estadoCivil = dt.Rows[0]["EstadoCivil"].ToString().Trim();
-            mem.titEleitor = dt.Rows[0]["TitEleitor"].ToString();
+            mem.nomePai = dt.Rows[0]["Nome_Pai"].ToString();
+            mem.nomeMae = dt.Rows[0]["Nome_Mae"].ToString();
+            mem.estadoCivil = dt.Rows[0]["Estado_Civil"].ToString().Trim();
+            mem.titEleitor = dt.Rows[0]["Tit_Eleitor"].ToString();
             mem.obs = dt.Rows[0]["Obs"].ToString();
             mem.profissao = dt.Rows[0]["Profissao"].ToString();
-            mem.localNascimento = dt.Rows[0]["LocalNascimento"].ToString();
+            mem.localNascimento = dt.Rows[0]["Local_Nascimento"].ToString();
             mem.procedencia = dt.Rows[0]["Procedencia"].ToString();
 
             return (mem);
@@ -421,8 +421,8 @@ and inativo = 0
 
         public DataTable listaAdmissao(SQLiteConnection con)
         {
-            string strSql = @" SELECT  Id, [Desc] as 'Descrição'" +
-                            @" from TbAdmissaoMembro";
+            string strSql = @" SELECT  Id, DESCRICAO as 'Descrição'" +
+                            @" from TbAdmissao_Membro";
             SQLiteCommand cmd = new SQLiteCommand(strSql, con);
             SQLiteDataAdapter da = new SQLiteDataAdapter();
             DataTable dt = new DataTable();
@@ -437,10 +437,10 @@ and inativo = 0
 
         }
 
-        public DataTable listaStatus(SQLiteConnection con)
+        public DataTable listaSituacao(SQLiteConnection con)
         {
-            string strSql = @" SELECT  Id, [Desc] as 'Descrição'" +
-                            @" from TbSituacaoMembro";
+            string strSql = @" SELECT  Id, Descricao as 'Descrição'" +
+                            @" from TbSituacao_Membro";
             SQLiteCommand cmd = new SQLiteCommand(strSql, con);
             SQLiteDataAdapter da = new SQLiteDataAdapter();
             DataTable dt = new DataTable();
