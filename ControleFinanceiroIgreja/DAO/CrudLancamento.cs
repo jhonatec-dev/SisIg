@@ -304,7 +304,7 @@ ORDER BY M.NOME
             dt.Columns.Add("Saidas", typeof(decimal));
             dt.Columns.Add("SaldoMes", typeof(decimal));
 
-            Decimal Entradas, Saidas, SaldoMes;
+            //Decimal Entradas, Saidas, SaldoMes;
 
 
 

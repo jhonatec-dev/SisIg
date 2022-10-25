@@ -7,7 +7,7 @@ namespace ControleFinanceiroIgreja.GUI
 {
     public partial class frmCatSaida : Form
     {
-        BindingSource bs;
+        //BindingSource bs;
         CatSaida cat;
 
 

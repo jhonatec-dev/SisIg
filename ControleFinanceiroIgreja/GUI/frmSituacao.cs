@@ -7,7 +7,7 @@ namespace ControleFinanceiroIgreja.GUI
 {
     public partial class frmSituacao : Form
     {
-        BindingSource bs;
+        //BindingSource bs;
         Status sta = new Status();
 
         public frmSituacao()

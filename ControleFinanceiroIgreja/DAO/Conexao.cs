@@ -25,7 +25,7 @@ namespace ControleFinanceiroIgreja.DAO
 
             con.Open();
 
-            con.State.ToString();
+            //con.State.ToString();
 
         }
 

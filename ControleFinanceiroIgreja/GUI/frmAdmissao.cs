@@ -7,7 +7,7 @@ namespace ControleFinanceiroIgreja.GUI
 {
     public partial class frmAdmissao : Form
     {
-        BindingSource bs;
+        //BindingSource bs;
         Admissao adm = new Admissao();
 
         public frmAdmissao()

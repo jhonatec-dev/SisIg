@@ -17,7 +17,6 @@ C:\Projetos\ControleFinanceiroIgreja\ControleFinanceiroIgreja\bin\Debug\stdole.d
 C:\Projetos\ControleFinanceiroIgreja\ControleFinanceiroIgreja\bin\Debug\EntityFramework.xml
 C:\Projetos\ControleFinanceiroIgreja\ControleFinanceiroIgreja\bin\Debug\EntityFramework.SqlServer.xml
 C:\Projetos\ControleFinanceiroIgreja\ControleFinanceiroIgreja\bin\Debug\System.Data.SQLite.xml
-C:\Projetos\ControleFinanceiroIgreja\ControleFinanceiroIgreja\bin\Debug\System.Data.SQLite.dll.config
 C:\Projetos\ControleFinanceiroIgreja\ControleFinanceiroIgreja\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
 C:\Projetos\ControleFinanceiroIgreja\ControleFinanceiroIgreja\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
 C:\Projetos\ControleFinanceiroIgreja\ControleFinanceiroIgreja\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll

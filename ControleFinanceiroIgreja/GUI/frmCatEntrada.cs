@@ -8,7 +8,7 @@ namespace ControleFinanceiroIgreja.GUI
     public partial class frmCatEntrada : Form
     {
 
-        BindingSource bs;
+        //BindingSource bs;
         CatEntrada cat = new CatEntrada();
 
         public frmCatEntrada()

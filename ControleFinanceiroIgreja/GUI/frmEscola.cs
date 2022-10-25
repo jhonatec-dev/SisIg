@@ -56,7 +56,7 @@ namespace ControleFinanceiroIgreja.GUI
             {
                 case 0:
                     MessageBox.Show("Cadastre uma nova classe, ou selecione uma existente!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    return;
+                    
                     break;
                 case 1:
                     nomeClasse = tvwExplorar.SelectedNode.Text;
@@ -142,7 +142,7 @@ namespace ControleFinanceiroIgreja.GUI
             {
                 case 0:
                     MessageBox.Show("Cadastre uma nova classe, ou selecione uma existente!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    return;
+                    
                     break;
                 case 1:
                     nomeClasse = tvwExplorar.SelectedNode.Text;
@@ -200,8 +200,8 @@ namespace ControleFinanceiroIgreja.GUI
             {
                 case 0:
                     MessageBox.Show("Cadastre uma nova classe, ou selecione uma existente!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    return;
                     break;
+                    
                 case 1:
                     nomeClasse = tvwExplorar.SelectedNode.Text;
                     break;
@@ -251,7 +251,7 @@ namespace ControleFinanceiroIgreja.GUI
             {
                 case 0:
                     MessageBox.Show("Cadastre uma nova classe, ou selecione uma existente!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    return;
+                    
                     break;
                 case 1:
                     nomeClasse = tvwExplorar.SelectedNode.Text;
@@ -311,7 +311,7 @@ namespace ControleFinanceiroIgreja.GUI
             {
                 case 0:
                     MessageBox.Show("Cadastre uma nova classe, ou selecione uma existente!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    return;
+                    
                     break;
                 case 1:
                     nomeClasse = tvwExplorar.SelectedNode.Text;
@@ -1485,20 +1485,20 @@ namespace ControleFinanceiroIgreja.GUI
 
                 case 0:
                     return (Color.Black);
-                    break;
+                    
                 case 1:
                     return (Color.Red);
-                    break;
+                    
                 case 2:
                     return (Color.Green);
-                    break;
+                    
 
                 case 3:
                     return (Color.Brown);
-                    break;
+                    
                 default:
                     return (Color.Black);
-                    break;
+                    
             }
 
 

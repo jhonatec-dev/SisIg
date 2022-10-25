@@ -31,26 +31,26 @@ namespace ControleFinanceiroIgreja.GUI
 
         protected override void WndProc(ref Message message)
         {
-           
-            
-            
+
+
+
             const int WM_SYSCOMMAND = 0x0112;
-            const int SC_MOVE = 0xF010;
+            //const int SC_MOVE = 0xF010;
 
             switch (message.Msg)
             {
                 case WM_SYSCOMMAND:
                     int command = message.WParam.ToInt32() & 0xfff0;
                     //if (command == SC_MOVE)
-                      //  return;
+                    //  return;
                     break;
             }
 
             base.WndProc(ref message);
-        
-            
-            
-            }
+
+
+
+        }
 
         private void frmHome_Load(object sender, EventArgs e)
         {
@@ -69,7 +69,7 @@ namespace ControleFinanceiroIgreja.GUI
             {
                 Conexao.conectar();
 
-                ig = new CrudIgreja().lerIgreja(Conexao.con);
+               /* ig = new CrudIgreja().lerIgreja(Conexao.con);
                 frmLogin frmL = new frmLogin(ig.nome);
 
 
@@ -91,7 +91,7 @@ namespace ControleFinanceiroIgreja.GUI
                 login();
 
                 //ig = new CrudIgreja().lerIgreja(Conexao.con);
-                this.Text = ig.nome;
+                this.Text = ig.nome; */
 
                 pnInicial.Visible = false;
 
@@ -109,12 +109,12 @@ namespace ControleFinanceiroIgreja.GUI
                 listaBotoes.Add(btnUsuarios);
 
             }
-            catch (Exception)
+            catch (Exception err)
             {
-                MessageBox.Show("Erro de conexão", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Erro de conexão: " + err.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Application.Exit();
             }
-            
+
             //Microsoft.Win32.SystemEvents.DisplaySettingsChanged +=  new System.EventHandler(displaySettingsChanged);
         }
 
@@ -170,7 +170,7 @@ namespace ControleFinanceiroIgreja.GUI
 
                 if (btn == btnMarcado)
                 {
-                    btn.BackColor = Color.FromArgb(100,100,100) ;
+                    btn.BackColor = Color.FromArgb(100, 100, 100);
                 }
                 else
                 {
@@ -240,6 +240,8 @@ namespace ControleFinanceiroIgreja.GUI
             MessageBox.Show("Função em atualização, aguarde o lançamento final.");
             return;
 
+            /*
+
             marcarBotoes(btnEscola);
 
             foreach (Form f in this.MdiChildren)
@@ -262,6 +264,9 @@ namespace ControleFinanceiroIgreja.GUI
             frm.MdiParent = this;
             frm.Dock = DockStyle.Fill;
             frm.Show();
+
+
+            */
         }
 
         private void btnCargos_Click(object sender, EventArgs e)
@@ -510,7 +515,7 @@ namespace ControleFinanceiroIgreja.GUI
             {
                 if (Conexao.con != null)
                     if (Conexao.con.State == ConnectionState.Open)
-                    Conexao.con.Close();
+                        Conexao.con.Close();
             }
             catch (Exception)
             {
@@ -579,14 +584,14 @@ namespace ControleFinanceiroIgreja.GUI
 
         public void aparecer()
         {
-            
+
             pnBotoes.Width = 200;
         }
 
         public void esconder()
         {
             pnBotoes.Width = 48;
-          
+
 
         }
 
@@ -635,7 +640,7 @@ namespace ControleFinanceiroIgreja.GUI
         {
         }
 
-  
+
 
         private void pnIgreja_MouseDown(object sender, MouseEventArgs e)
         {
@@ -668,7 +673,7 @@ namespace ControleFinanceiroIgreja.GUI
 
         }
 
-        
+
         private void btnMenu_Click(object sender, EventArgs e)
         {
             if (pnBotoes.Width == 48)

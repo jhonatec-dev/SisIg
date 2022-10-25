@@ -348,20 +348,20 @@ namespace ControleFinanceiroIgreja.GUI
 
                 case 0:
                     return (Color.Black);
-                    break;
+                    
                 case 1:
                     return (Color.Red);
-                    break;
+                    
                 case 2:
                     return (Color.Green);
-                    break;
+                    
 
                 case 3:
                     return (Color.Brown);
-                    break;
+                    
                 default:
                     return (Color.Black);
-                    break;
+                    
             }
 
 
