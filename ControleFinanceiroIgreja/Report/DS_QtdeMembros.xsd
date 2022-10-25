@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_QtdeMembros" targetNamespace="http://tempuri.org/DS_QtdeMembros.xsd" xmlns:mstns="http://tempuri.org/DS_QtdeMembros.xsd" xmlns="http://tempuri.org/DS_QtdeMembros.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_QtdeMembros" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_QtdeMembros" msprop:Generator_UserDSName="DS_QtdeMembros">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DtQtdeMembros" msprop:Generator_TableClassName="DtQtdeMembrosDataTable" msprop:Generator_TableVarName="tableDtQtdeMembros" msprop:Generator_RowChangedName="DtQtdeMembrosRowChanged" msprop:Generator_TablePropName="DtQtdeMembros" msprop:Generator_RowDeletingName="DtQtdeMembrosRowDeleting" msprop:Generator_RowChangingName="DtQtdeMembrosRowChanging" msprop:Generator_RowEvHandlerName="DtQtdeMembrosRowChangeEventHandler" msprop:Generator_RowDeletedName="DtQtdeMembrosRowDeleted" msprop:Generator_RowClassName="DtQtdeMembrosRow" msprop:Generator_UserTableName="DtQtdeMembros" msprop:Generator_RowEvArgName="DtQtdeMembrosRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Situacao" msprop:Generator_ColumnVarNameInTable="columnSituacao" msprop:Generator_ColumnPropNameInRow="Situacao" msprop:Generator_ColumnPropNameInTable="SituacaoColumn" msprop:Generator_UserColumnName="Situacao" type="xs:string" minOccurs="0" />
+              <xs:element name="Qtde" msprop:Generator_ColumnVarNameInTable="columnQtde" msprop:Generator_ColumnPropNameInRow="Qtde" msprop:Generator_ColumnPropNameInTable="QtdeColumn" msprop:Generator_UserColumnName="Qtde" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

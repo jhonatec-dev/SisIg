@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_Reunioes" targetNamespace="http://tempuri.org/DS_Reunioes.xsd" xmlns:mstns="http://tempuri.org/DS_Reunioes.xsd" xmlns="http://tempuri.org/DS_Reunioes.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_Reunioes" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_Reunioes" msprop:Generator_UserDSName="DS_Reunioes">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DtReunioes" msprop:Generator_TableClassName="DtReunioesDataTable" msprop:Generator_TableVarName="tableDtReunioes" msprop:Generator_RowChangedName="DtReunioesRowChanged" msprop:Generator_TablePropName="DtReunioes" msprop:Generator_RowDeletingName="DtReunioesRowDeleting" msprop:Generator_RowChangingName="DtReunioesRowChanging" msprop:Generator_RowEvHandlerName="DtReunioesRowChangeEventHandler" msprop:Generator_RowDeletedName="DtReunioesRowDeleted" msprop:Generator_RowClassName="DtReunioesRow" msprop:Generator_UserTableName="DtReunioes" msprop:Generator_RowEvArgName="DtReunioesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:string" minOccurs="0" />
+              <xs:element name="Data" msprop:Generator_ColumnVarNameInTable="columnData" msprop:Generator_ColumnPropNameInRow="Data" msprop:Generator_ColumnPropNameInTable="DataColumn" msprop:Generator_UserColumnName="Data" type="xs:string" minOccurs="0" />
+              <xs:element name="Presentes" msprop:Generator_ColumnVarNameInTable="columnPresentes" msprop:Generator_ColumnPropNameInRow="Presentes" msprop:Generator_ColumnPropNameInTable="PresentesColumn" msprop:Generator_UserColumnName="Presentes" type="xs:string" minOccurs="0" />
+              <xs:element name="Ausentes" msprop:Generator_ColumnVarNameInTable="columnAusentes" msprop:Generator_ColumnPropNameInRow="Ausentes" msprop:Generator_ColumnPropNameInTable="AusentesColumn" msprop:Generator_UserColumnName="Ausentes" type="xs:string" minOccurs="0" />
+              <xs:element name="Visitantes" msprop:Generator_ColumnVarNameInTable="columnVisitantes" msprop:Generator_ColumnPropNameInRow="Visitantes" msprop:Generator_ColumnPropNameInTable="VisitantesColumn" msprop:Generator_UserColumnName="Visitantes" type="xs:string" minOccurs="0" />
+              <xs:element name="Oferta" msprop:Generator_ColumnVarNameInTable="columnOferta" msprop:Generator_ColumnPropNameInRow="Oferta" msprop:Generator_ColumnPropNameInTable="OfertaColumn" msprop:Generator_UserColumnName="Oferta" type="xs:string" minOccurs="0" />
+              <xs:element name="Observação" msprop:Generator_ColumnVarNameInTable="columnObservação" msprop:Generator_ColumnPropNameInRow="Observação" msprop:Generator_ColumnPropNameInTable="ObservaçãoColumn" msprop:Generator_UserColumnName="Observação" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

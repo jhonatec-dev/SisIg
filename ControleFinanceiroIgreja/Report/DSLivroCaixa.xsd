@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSLivroCaixa" targetNamespace="http://tempuri.org/DSLivroCaixa.xsd" xmlns:mstns="http://tempuri.org/DSLivroCaixa.xsd" xmlns="http://tempuri.org/DSLivroCaixa.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSLivroCaixa" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSLivroCaixa" msprop:Generator_UserDSName="DSLivroCaixa">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DtLivro" msprop:Generator_TableClassName="DtLivroDataTable" msprop:Generator_TableVarName="tableDtLivro" msprop:Generator_RowChangedName="DtLivroRowChanged" msprop:Generator_TablePropName="DtLivro" msprop:Generator_RowDeletingName="DtLivroRowDeleting" msprop:Generator_RowChangingName="DtLivroRowChanging" msprop:Generator_RowEvHandlerName="DtLivroRowChangeEventHandler" msprop:Generator_RowDeletedName="DtLivroRowDeleted" msprop:Generator_RowClassName="DtLivroRow" msprop:Generator_UserTableName="DtLivro" msprop:Generator_RowEvArgName="DtLivroRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Data" msprop:Generator_ColumnVarNameInTable="columnData" msprop:Generator_ColumnPropNameInRow="Data" msprop:Generator_ColumnPropNameInTable="DataColumn" msprop:Generator_UserColumnName="Data" type="xs:string" minOccurs="0" />
+              <xs:element name="Referência" msprop:Generator_ColumnVarNameInTable="columnReferência" msprop:Generator_ColumnPropNameInRow="Referência" msprop:Generator_ColumnPropNameInTable="ReferênciaColumn" msprop:Generator_UserColumnName="Referência" type="xs:string" minOccurs="0" />
+              <xs:element name="Entrada" msprop:Generator_ColumnVarNameInTable="columnEntrada" msprop:Generator_ColumnPropNameInRow="Entrada" msprop:Generator_ColumnPropNameInTable="EntradaColumn" msprop:Generator_UserColumnName="Entrada" type="xs:string" minOccurs="0" />
+              <xs:element name="Saída" msprop:Generator_ColumnVarNameInTable="columnSaída" msprop:Generator_ColumnPropNameInRow="Saída" msprop:Generator_ColumnPropNameInTable="SaídaColumn" msprop:Generator_UserColumnName="Saída" type="xs:string" minOccurs="0" />
+              <xs:element name="Saldo" msprop:Generator_ColumnVarNameInTable="columnSaldo" msprop:Generator_ColumnPropNameInRow="Saldo" msprop:Generator_ColumnPropNameInTable="SaldoColumn" msprop:Generator_UserColumnName="Saldo" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

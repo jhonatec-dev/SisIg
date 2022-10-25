@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_Cargos" targetNamespace="http://tempuri.org/DS_Cargos.xsd" xmlns:mstns="http://tempuri.org/DS_Cargos.xsd" xmlns="http://tempuri.org/DS_Cargos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_Cargos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_Cargos" msprop:Generator_UserDSName="DS_Cargos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DtCargos" msprop:Generator_TableClassName="DtCargosDataTable" msprop:Generator_TableVarName="tableDtCargos" msprop:Generator_RowChangedName="DtCargosRowChanged" msprop:Generator_TablePropName="DtCargos" msprop:Generator_RowDeletingName="DtCargosRowDeleting" msprop:Generator_RowChangingName="DtCargosRowChanging" msprop:Generator_RowEvHandlerName="DtCargosRowChangeEventHandler" msprop:Generator_RowDeletedName="DtCargosRowDeleted" msprop:Generator_RowClassName="DtCargosRow" msprop:Generator_UserTableName="DtCargos" msprop:Generator_RowEvArgName="DtCargosRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Descricao" msprop:Generator_ColumnVarNameInTable="columnDescricao" msprop:Generator_ColumnPropNameInRow="Descricao" msprop:Generator_ColumnPropNameInTable="DescricaoColumn" msprop:Generator_UserColumnName="Descricao" type="xs:string" minOccurs="0" />
+              <xs:element name="Membro" msprop:Generator_ColumnVarNameInTable="columnMembro" msprop:Generator_ColumnPropNameInRow="Membro" msprop:Generator_ColumnPropNameInTable="MembroColumn" msprop:Generator_UserColumnName="Membro" type="xs:string" minOccurs="0" />
+              <xs:element name="Inicio" msprop:Generator_ColumnVarNameInTable="columnInicio" msprop:Generator_ColumnPropNameInRow="Inicio" msprop:Generator_ColumnPropNameInTable="InicioColumn" msprop:Generator_UserColumnName="Inicio" type="xs:string" minOccurs="0" />
+              <xs:element name="Fim" msprop:Generator_ColumnVarNameInTable="columnFim" msprop:Generator_ColumnPropNameInRow="Fim" msprop:Generator_ColumnPropNameInTable="FimColumn" msprop:Generator_UserColumnName="Fim" type="xs:string" minOccurs="0" />
+              <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_Visitas" targetNamespace="http://tempuri.org/DS_Visitas.xsd" xmlns:mstns="http://tempuri.org/DS_Visitas.xsd" xmlns="http://tempuri.org/DS_Visitas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_Visitas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_Visitas" msprop:Generator_UserDSName="DS_Visitas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DtVisitas" msprop:Generator_TableClassName="DtVisitasDataTable" msprop:Generator_TableVarName="tableDtVisitas" msprop:Generator_RowChangedName="DtVisitasRowChanged" msprop:Generator_TablePropName="DtVisitas" msprop:Generator_RowDeletingName="DtVisitasRowDeleting" msprop:Generator_RowChangingName="DtVisitasRowChanging" msprop:Generator_RowEvHandlerName="DtVisitasRowChangeEventHandler" msprop:Generator_RowDeletedName="DtVisitasRowDeleted" msprop:Generator_RowClassName="DtVisitasRow" msprop:Generator_UserTableName="DtVisitas" msprop:Generator_RowEvArgName="DtVisitasRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" minOccurs="0" />
+              <xs:element name="Data" msprop:Generator_ColumnVarNameInTable="columnData" msprop:Generator_ColumnPropNameInRow="Data" msprop:Generator_ColumnPropNameInTable="DataColumn" msprop:Generator_UserColumnName="Data" type="xs:string" minOccurs="0" />
+              <xs:element name="Obs" msprop:Generator_ColumnVarNameInTable="columnObs" msprop:Generator_ColumnPropNameInRow="Obs" msprop:Generator_ColumnPropNameInTable="ObsColumn" msprop:Generator_UserColumnName="Obs" type="xs:string" minOccurs="0" />
+              <xs:element name="Tipo" msprop:Generator_ColumnVarNameInTable="columnTipo" msprop:Generator_ColumnPropNameInRow="Tipo" msprop:Generator_ColumnPropNameInTable="TipoColumn" msprop:Generator_UserColumnName="Tipo" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

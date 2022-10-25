@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_Balancete" targetNamespace="http://tempuri.org/DS_Balancete.xsd" xmlns:mstns="http://tempuri.org/DS_Balancete.xsd" xmlns="http://tempuri.org/DS_Balancete.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_Balancete" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_Balancete" msprop:Generator_UserDSName="DS_Balancete">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DtBalancete" msprop:Generator_TableClassName="DtBalanceteDataTable" msprop:Generator_TableVarName="tableDtBalancete" msprop:Generator_RowChangedName="DtBalanceteRowChanged" msprop:Generator_TablePropName="DtBalancete" msprop:Generator_RowDeletingName="DtBalanceteRowDeleting" msprop:Generator_RowChangingName="DtBalanceteRowChanging" msprop:Generator_RowEvHandlerName="DtBalanceteRowChangeEventHandler" msprop:Generator_RowDeletedName="DtBalanceteRowDeleted" msprop:Generator_RowClassName="DtBalanceteRow" msprop:Generator_UserTableName="DtBalancete" msprop:Generator_RowEvArgName="DtBalanceteRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Mes" msprop:Generator_ColumnVarNameInTable="columnMes" msprop:Generator_ColumnPropNameInRow="Mes" msprop:Generator_ColumnPropNameInTable="MesColumn" msprop:Generator_UserColumnName="Mes" type="xs:string" minOccurs="0" />
+              <xs:element name="Entradas" msprop:Generator_ColumnVarNameInTable="columnEntradas" msprop:Generator_ColumnPropNameInRow="Entradas" msprop:Generator_ColumnPropNameInTable="EntradasColumn" msprop:Generator_UserColumnName="Entradas" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Saidas" msprop:Generator_ColumnVarNameInTable="columnSaidas" msprop:Generator_ColumnPropNameInRow="Saidas" msprop:Generator_ColumnPropNameInTable="SaidasColumn" msprop:Generator_UserColumnName="Saidas" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SaldoMes" msprop:Generator_ColumnVarNameInTable="columnSaldoMes" msprop:Generator_ColumnPropNameInRow="SaldoMes" msprop:Generator_ColumnPropNameInTable="SaldoMesColumn" msprop:Generator_UserColumnName="SaldoMes" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SaldoGeral" msprop:Generator_ColumnVarNameInTable="columnSaldoGeral" msprop:Generator_ColumnPropNameInRow="SaldoGeral" msprop:Generator_ColumnPropNameInTable="SaldoGeralColumn" msprop:Generator_UserColumnName="SaldoGeral" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

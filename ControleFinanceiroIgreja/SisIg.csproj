@@ -1,0 +1,1538 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6BB7F3EC-8B63-42DC-9FAD-C2DB49CEB184}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ControleFinanceiroIgreja</RootNamespace>
+    <AssemblyName>SisIg</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>C:\Users\Jhônatan\Desktop\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+    <BootstrapperComponentsUrl>C:\Users\Jhônatan\Desktop</BootstrapperComponentsUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>9D514BA0472C1FE1239B353485B3BC470B4298EB</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ControleFinanceiroIgreja_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>ControleFinanceiroIgreja.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>SisIg.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.113.1\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.113.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.113.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAO\Conexao.cs" />
+    <Compile Include="DAO\CrudEntrada.cs" />
+    <Compile Include="DAO\CrudEscola.cs" />
+    <Compile Include="DAO\CrudIgreja.cs" />
+    <Compile Include="DAO\CrudLancamento.cs" />
+    <Compile Include="DAO\CrudMembro.cs" />
+    <Compile Include="DAO\CrudSaida.cs" />
+    <Compile Include="DAO\CrudUsuario.cs" />
+    <Compile Include="DAO\CrudVisitantes.cs" />
+    <Compile Include="DAO\CrudCargos.cs" />
+    <Compile Include="DAO\Funcoes.cs" />
+    <Compile Include="GUI\frmAdmissao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmAdmissao.Designer.cs">
+      <DependentUpon>frmAdmissao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmAltCargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmAltCargo.Designer.cs">
+      <DependentUpon>frmAltCargo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmAltCargoMembro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmAltCargoMembro.Designer.cs">
+      <DependentUpon>frmAltCargoMembro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmAltHistorico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmAltHistorico.Designer.cs">
+      <DependentUpon>frmAltHistorico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmAltMembro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmAltMembro.Designer.cs">
+      <DependentUpon>frmAltMembro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmAltUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmAltUsuario.Designer.cs">
+      <DependentUpon>frmAltUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmAltVisita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmAltVisita.Designer.cs">
+      <DependentUpon>frmAltVisita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmAltVisitante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmAltVisitante.Designer.cs">
+      <DependentUpon>frmAltVisitante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmBackupAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmBackupAuto.Designer.cs">
+      <DependentUpon>frmBackupAuto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmCargosMembros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmCargosMembros.Designer.cs">
+      <DependentUpon>frmCargosMembros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmConfigUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmConfigUsuario.Designer.cs">
+      <DependentUpon>frmConfigUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmCatEntrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmCatEntrada.Designer.cs">
+      <DependentUpon>frmCatEntrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmCatSaida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmCatSaida.Designer.cs">
+      <DependentUpon>frmCatSaida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmDadosIgreja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmDadosIgreja.Designer.cs">
+      <DependentUpon>frmDadosIgreja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmContato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmContato.Designer.cs">
+      <DependentUpon>frmContato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmEntrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmEntrada.Designer.cs">
+      <DependentUpon>frmEntrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmEscola.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmEscola.Designer.cs">
+      <DependentUpon>frmEscola.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmHistorico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmHistorico.Designer.cs">
+      <DependentUpon>frmHistorico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmHome.Designer.cs">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmLancamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmLancamentos.Designer.cs">
+      <DependentUpon>frmLancamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmMembros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmMembros.Designer.cs">
+      <DependentUpon>frmMembros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmNiver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmNiver.Designer.cs">
+      <DependentUpon>frmNiver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmPontuar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmPontuar.Designer.cs">
+      <DependentUpon>frmPontuar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmReuniao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmReuniao.Designer.cs">
+      <DependentUpon>frmReuniao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmSaida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmSaida.Designer.cs">
+      <DependentUpon>frmSaida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmSelAnoEntrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmSelAnoEntrada.Designer.cs">
+      <DependentUpon>frmSelAnoEntrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmSelAnoMembro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmSelAnoMembro.Designer.cs">
+      <DependentUpon>frmSelAnoMembro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmSelClasseAno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmSelClasseAno.Designer.cs">
+      <DependentUpon>frmSelClasseAno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmSelMes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmSelMes.Designer.cs">
+      <DependentUpon>frmSelMes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmSituacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmSituacao.Designer.cs">
+      <DependentUpon>frmSituacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmteste.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmteste.Designer.cs">
+      <DependentUpon>frmteste.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmUsuarios.Designer.cs">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmVerRelatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmVerRelatorio.Designer.cs">
+      <DependentUpon>frmVerRelatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmVisitantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmVisitantes.Designer.cs">
+      <DependentUpon>frmVisitantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DSEntradasGeral.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSEntradasGeral.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DSLivroCaixa.cs">
+      <DependentUpon>DSLivroCaixa.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DSLivroCaixa.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSLivroCaixa.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DSSaidasGeral.cs">
+      <DependentUpon>DSSaidasGeral.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DSSaidasGeral.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSSaidasGeral.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DS_AlunosClasse.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_AlunosClasse.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DS_ChamadaReuniao.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_ChamadaReuniao.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DS_Historico.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Historico.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DS_NiverDinVis.cs">
+      <DependentUpon>DS_NiverDinVis.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DS_NiverDinVis.Designer.cs">
+      <DependentUpon>DS_NiverDinVis.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Report\DS_NiverDin.cs">
+      <DependentUpon>DS_NiverDin.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DS_NiverDin.Designer.cs">
+      <DependentUpon>DS_NiverDin.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Report\DS_Aniversariantes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Aniversariantes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DS_Balancete.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Balancete.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DS_Cargos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Cargos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DS_Classes.cs">
+      <DependentUpon>DS_Classes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DS_Classes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Classes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DS_Dizimistas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Dizimistas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DS_Entradas.cs">
+      <DependentUpon>DS_Entradas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DS_Entradas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Entradas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DS_EntradasMembro.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_EntradasMembro.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DS_Membros.cs">
+      <DependentUpon>DS_Membros.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DS_Membros.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Membros.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DS_MembrosEntrada.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_MembrosEntrada.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DS_QtdeMembros.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_QtdeMembros.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DS_Reuniao.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Reuniao.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DS_Reunioes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Reunioes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DS_Sexos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Sexos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DS_Visitantes.cs">
+      <DependentUpon>DS_Visitantes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DS_Visitantes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Visitantes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DS_Visitas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Visitas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TAD\Admissao.cs" />
+    <Compile Include="TAD\Aluno.cs" />
+    <Compile Include="TAD\Cargo.cs" />
+    <Compile Include="TAD\CargoMembro.cs" />
+    <Compile Include="TAD\CatEntrada.cs" />
+    <Compile Include="TAD\CatSaida.cs" />
+    <Compile Include="TAD\Classe.cs" />
+    <Compile Include="TAD\Entrada.cs" />
+    <Compile Include="TAD\Historico.cs" />
+    <Compile Include="TAD\Igreja.cs" />
+    <Compile Include="TAD\Membro.cs" />
+    <Compile Include="TAD\PontoAluno.cs" />
+    <Compile Include="TAD\Reuniao.cs" />
+    <Compile Include="TAD\Saida.cs" />
+    <Compile Include="TAD\Status.cs" />
+    <Compile Include="TAD\TiposRel.cs" />
+    <Compile Include="TAD\Usuario.cs" />
+    <Compile Include="TAD\Visitantes.cs" />
+    <Compile Include="TAD\Visitas.cs" />
+    <EmbeddedResource Include="GUI\frmAdmissao.resx">
+      <DependentUpon>frmAdmissao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmAltCargo.resx">
+      <DependentUpon>frmAltCargo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmAltCargoMembro.resx">
+      <DependentUpon>frmAltCargoMembro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmAltHistorico.resx">
+      <DependentUpon>frmAltHistorico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmAltMembro.resx">
+      <DependentUpon>frmAltMembro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmAltUsuario.resx">
+      <DependentUpon>frmAltUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmAltVisita.resx">
+      <DependentUpon>frmAltVisita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmAltVisitante.resx">
+      <DependentUpon>frmAltVisitante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmBackupAuto.resx">
+      <DependentUpon>frmBackupAuto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmCargosMembros.resx">
+      <DependentUpon>frmCargosMembros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmConfigUsuario.resx">
+      <DependentUpon>frmConfigUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmCatEntrada.resx">
+      <DependentUpon>frmCatEntrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmCatSaida.resx">
+      <DependentUpon>frmCatSaida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmDadosIgreja.resx">
+      <DependentUpon>frmDadosIgreja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmContato.resx">
+      <DependentUpon>frmContato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmEntrada.resx">
+      <DependentUpon>frmEntrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmEscola.resx">
+      <DependentUpon>frmEscola.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmHistorico.resx">
+      <DependentUpon>frmHistorico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmHome.resx">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmLancamentos.resx">
+      <DependentUpon>frmLancamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmMembros.resx">
+      <DependentUpon>frmMembros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmNiver.resx">
+      <DependentUpon>frmNiver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmPontuar.resx">
+      <DependentUpon>frmPontuar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmReuniao.resx">
+      <DependentUpon>frmReuniao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmSaida.resx">
+      <DependentUpon>frmSaida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmSelAnoEntrada.resx">
+      <DependentUpon>frmSelAnoEntrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmSelAnoMembro.resx">
+      <DependentUpon>frmSelAnoMembro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmSelClasseAno.resx">
+      <DependentUpon>frmSelClasseAno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmSelMes.resx">
+      <DependentUpon>frmSelMes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmSituacao.resx">
+      <DependentUpon>frmSituacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmteste.resx">
+      <DependentUpon>frmteste.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmVerRelatorio.resx">
+      <DependentUpon>frmVerRelatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmVisitantes.resx">
+      <DependentUpon>frmVisitantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\RP_LivroCaixa.rdlc" />
+    <EmbeddedResource Include="Report\RP_NiverDin.rdlc" />
+    <EmbeddedResource Include="Report\RP_AlunosClasse.rdlc" />
+    <EmbeddedResource Include="Report\RP_GeralChartAnual.rdlc" />
+    <EmbeddedResource Include="Report\RP_LancGeralAnual.rdlc" />
+    <EmbeddedResource Include="Report\RP_ChamadaReuniao.rdlc" />
+    <EmbeddedResource Include="Report\RP_Reunioes_Chart.rdlc" />
+    <EmbeddedResource Include="Report\RP_Reunioes.rdlc" />
+    <EmbeddedResource Include="Report\RP_Classes.rdlc" />
+    <EmbeddedResource Include="Report\RP_Alunos.rdlc" />
+    <EmbeddedResource Include="Report\RP_Professores.rdlc" />
+    <EmbeddedResource Include="Report\RP_Reuniao_Null.rdlc" />
+    <EmbeddedResource Include="Report\RP_Reuniao.rdlc" />
+    <EmbeddedResource Include="Report\RP_Dizimistas.rdlc" />
+    <EmbeddedResource Include="Report\RP_Aniversariantes.rdlc" />
+    <EmbeddedResource Include="Report\RP_Balancete.rdlc" />
+    <EmbeddedResource Include="Report\RP_BalanceteChart.rdlc" />
+    <EmbeddedResource Include="Report\RP_EntradasMembro.rdlc" />
+    <EmbeddedResource Include="Report\RP_Ficha_Novo_Visitante.rdlc" />
+    <EmbeddedResource Include="Report\RP_Ficha_Novo_Membro.rdlc" />
+    <EmbeddedResource Include="Report\RP_Ficha_Membro.rdlc" />
+    <EmbeddedResource Include="Report\RP_GeralChart.rdlc" />
+    <EmbeddedResource Include="Report\RP_Lancamentos.rdlc" />
+    <EmbeddedResource Include="Report\RP_LancGeral.rdlc" />
+    <EmbeddedResource Include="Report\RP_Membros.rdlc" />
+    <EmbeddedResource Include="Report\RP_MembrosEntrada.rdlc" />
+    <EmbeddedResource Include="Report\RP_Qtde_Membros.rdlc" />
+    <EmbeddedResource Include="Report\RP_Sexo.rdlc" />
+    <EmbeddedResource Include="Report\RP_Cargos.rdlc" />
+    <EmbeddedResource Include="Report\RP_Visitantes.rdlc" />
+    <EmbeddedResource Include="Report\RP_Visitas.rdlc" />
+    <None Include="ControleFinanceiroIgreja_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Report\DSEntradasGeral.xsc">
+      <DependentUpon>DSEntradasGeral.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DSEntradasGeral.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSEntradasGeral.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\DSEntradasGeral.xss">
+      <DependentUpon>DSEntradasGeral.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DSLivroCaixa.xsc">
+      <DependentUpon>DSLivroCaixa.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DSLivroCaixa.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSLivroCaixa.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\DSLivroCaixa.xss">
+      <DependentUpon>DSLivroCaixa.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DSSaidasGeral.xsc">
+      <DependentUpon>DSSaidasGeral.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DSSaidasGeral.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSSaidasGeral.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\DSSaidasGeral.xss">
+      <DependentUpon>DSSaidasGeral.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_AlunosClasse.xsc">
+      <DependentUpon>DS_AlunosClasse.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_AlunosClasse.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_AlunosClasse.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\DS_AlunosClasse.xss">
+      <DependentUpon>DS_AlunosClasse.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_ChamadaReuniao.xsc">
+      <DependentUpon>DS_ChamadaReuniao.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_ChamadaReuniao.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_ChamadaReuniao.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\DS_ChamadaReuniao.xss">
+      <DependentUpon>DS_ChamadaReuniao.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_Historico.xsc">
+      <DependentUpon>DS_Historico.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_Historico.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Historico.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\DS_Historico.xss">
+      <DependentUpon>DS_Historico.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_NiverDinVis.xsc">
+      <DependentUpon>DS_NiverDinVis.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_NiverDinVis.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_NiverDinVis.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Report\DS_NiverDinVis.xss">
+      <DependentUpon>DS_NiverDinVis.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_NiverDin.xsc">
+      <DependentUpon>DS_NiverDin.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_NiverDin.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_NiverDin.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Report\DS_NiverDin.xss">
+      <DependentUpon>DS_NiverDin.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_Aniversariantes.xsc">
+      <DependentUpon>DS_Aniversariantes.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_Aniversariantes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Aniversariantes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\DS_Aniversariantes.xss">
+      <DependentUpon>DS_Aniversariantes.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_Balancete.xsc">
+      <DependentUpon>DS_Balancete.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_Balancete.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Balancete.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\DS_Balancete.xss">
+      <DependentUpon>DS_Balancete.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_Cargos.xsc">
+      <DependentUpon>DS_Cargos.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_Cargos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Cargos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\DS_Cargos.xss">
+      <DependentUpon>DS_Cargos.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_Classes.xsc">
+      <DependentUpon>DS_Classes.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_Classes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Classes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\DS_Classes.xss">
+      <DependentUpon>DS_Classes.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_Dizimistas.xsc">
+      <DependentUpon>DS_Dizimistas.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_Dizimistas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Dizimistas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\DS_Dizimistas.xss">
+      <DependentUpon>DS_Dizimistas.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_Entradas.xsc">
+      <DependentUpon>DS_Entradas.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_Entradas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Entradas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\DS_Entradas.xss">
+      <DependentUpon>DS_Entradas.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_EntradasMembro.xsc">
+      <DependentUpon>DS_EntradasMembro.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_EntradasMembro.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_EntradasMembro.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\DS_EntradasMembro.xss">
+      <DependentUpon>DS_EntradasMembro.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_Membros.xsc">
+      <DependentUpon>DS_Membros.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_Membros.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Membros.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\DS_Membros.xss">
+      <DependentUpon>DS_Membros.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_MembrosEntrada.xsc">
+      <DependentUpon>DS_MembrosEntrada.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_MembrosEntrada.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_MembrosEntrada.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\DS_MembrosEntrada.xss">
+      <DependentUpon>DS_MembrosEntrada.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_QtdeMembros.xsc">
+      <DependentUpon>DS_QtdeMembros.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_QtdeMembros.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_QtdeMembros.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\DS_QtdeMembros.xss">
+      <DependentUpon>DS_QtdeMembros.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_Reuniao.xsc">
+      <DependentUpon>DS_Reuniao.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_Reuniao.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Reuniao.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\DS_Reuniao.xss">
+      <DependentUpon>DS_Reuniao.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_Reunioes.xsc">
+      <DependentUpon>DS_Reunioes.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_Reunioes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Reunioes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\DS_Reunioes.xss">
+      <DependentUpon>DS_Reunioes.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_Sexos.xsc">
+      <DependentUpon>DS_Sexos.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_Sexos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Sexos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\DS_Sexos.xss">
+      <DependentUpon>DS_Sexos.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_Visitantes.xsc">
+      <DependentUpon>DS_Visitantes.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_Visitantes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Visitantes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\DS_Visitantes.xss">
+      <DependentUpon>DS_Visitantes.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_Visitas.xsc">
+      <DependentUpon>DS_Visitas.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_Visitas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Visitas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\DS_Visitas.xss">
+      <DependentUpon>DS_Visitas.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.ReportViewer.12.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Report Viewer 2014 Runtime</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.SqlLocalDB.11.1">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2012 Express LocalDB</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.SQLSysClrTypes.12.0.x64">
+      <Visible>False</Visible>
+      <ProductName>Microsoft®-System-CLR-Typen für SQL Server® 2014 %28x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.SQLSysClrTypes.12.0.x86">
+      <Visible>False</Visible>
+      <ProductName>Microsoft®-System-CLR-Typen für SQL Server® 2014 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ConytroleIgreja.ico" />
+    <None Include="Resources\JHONATEC.png" />
+    <None Include="Resources\locked.png" />
+    <None Include="Resources\cam.png" />
+    <None Include="Resources\Answers.png" />
+    <None Include="Resources\printer-48-black.png" />
+    <None Include="Resources\inativo-24.png" />
+    <None Include="Resources\inativo-32.png" />
+    <None Include="Resources\tag-32.png" />
+    <None Include="Resources\balancete.png" />
+    <None Include="Resources\analytics.png" />
+    <None Include="Resources\flow.png" />
+    <None Include="Resources\lista-membros.png" />
+    <None Include="Resources\bible.png" />
+    <None Include="Resources\logo-48.png" />
+    <None Include="Resources\sisig.png" />
+    <None Include="Resources\sisig1.png" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\minimize.png" />
+    <None Include="Resources\icons\001-unlocked.png" />
+    <None Include="Resources\icons\002-video player.png" />
+    <None Include="Resources\icons\003-video player.png" />
+    <None Include="Resources\icons\004-picture.png" />
+    <None Include="Resources\icons\005-picture.png" />
+    <None Include="Resources\icons\006-video player.png" />
+    <None Include="Resources\icons\007-television.png" />
+    <None Include="Resources\icons\008-film.png" />
+    <None Include="Resources\icons\009-photo camera.png" />
+    <None Include="Resources\icons\010-record.png" />
+    <None Include="Resources\icons\011-photo camera.png" />
+    <None Include="Resources\icons\012-video camera.png" />
+    <None Include="Resources\icons\013-music player.png" />
+    <None Include="Resources\icons\014-music player.png" />
+    <None Include="Resources\icons\015-video camera.png" />
+    <None Include="Resources\icons\016-music player.png" />
+    <None Include="Resources\icons\017-compact disc.png" />
+    <None Include="Resources\icons\018-compact disc.png" />
+    <None Include="Resources\icons\019-compact disc.png" />
+    <None Include="Resources\icons\020-music player.png" />
+    <None Include="Resources\icons\021-view.png" />
+    <None Include="Resources\icons\022-save.png" />
+    <None Include="Resources\icons\023-next.png" />
+    <None Include="Resources\icons\024-back.png" />
+    <None Include="Resources\icons\025-play button.png" />
+    <None Include="Resources\icons\026-stop.png" />
+    <None Include="Resources\icons\027-pause.png" />
+    <None Include="Resources\icons\028-fast forward.png" />
+    <None Include="Resources\icons\029-rewind.png" />
+    <None Include="Resources\icons\030-eject.png" />
+    <None Include="Resources\icons\031-shuffle.png" />
+    <None Include="Resources\icons\032-hide.png" />
+    <None Include="Resources\icons\033-repeat.png" />
+    <None Include="Resources\icons\034-skip.png" />
+    <None Include="Resources\icons\035-previous.png" />
+    <None Include="Resources\icons\036-play button.png" />
+    <None Include="Resources\icons\037-stop.png" />
+    <None Include="Resources\icons\038-pause.png" />
+    <None Include="Resources\icons\039-fast forward.png" />
+    <None Include="Resources\icons\040-rewind.png" />
+    <None Include="Resources\icons\041-eject.png" />
+    <None Include="Resources\icons\042-shuffle.png" />
+    <None Include="Resources\icons\043-view.png" />
+    <None Include="Resources\icons\044-repeat.png" />
+    <None Include="Resources\icons\045-speaker.png" />
+    <None Include="Resources\icons\046-speaker.png" />
+    <None Include="Resources\icons\047-speaker.png" />
+    <None Include="Resources\icons\048-speaker.png" />
+    <None Include="Resources\icons\049-mute.png" />
+    <None Include="Resources\icons\050-speaker.png" />
+    <None Include="Resources\icons\051-speaker.png" />
+    <None Include="Resources\icons\052-speaker.png" />
+    <None Include="Resources\icons\053-speaker.png" />
+    <None Include="Resources\icons\054-view.png" />
+    <None Include="Resources\icons\055-speaker.png" />
+    <None Include="Resources\icons\056-plus.png" />
+    <None Include="Resources\icons\057-minus.png" />
+    <None Include="Resources\icons\058-error.png" />
+    <None Include="Resources\icons\059-success.png" />
+    <None Include="Resources\icons\060-warning.png" />
+    <None Include="Resources\icons\061-info.png" />
+    <None Include="Resources\icons\062-forbidden.png" />
+    <None Include="Resources\icons\063-shutdown.png" />
+    <None Include="Resources\icons\064-restart.png" />
+    <None Include="Resources\icons\065-perspective.png" />
+    <None Include="Resources\icons\066-power.png" />
+    <None Include="Resources\icons\067-add.png" />
+    <None Include="Resources\icons\068-substract.png" />
+    <None Include="Resources\icons\069-multiply.png" />
+    <None Include="Resources\icons\070-divide.png" />
+    <None Include="Resources\icons\071-equal.png" />
+    <None Include="Resources\icons\072-percent.png" />
+    <None Include="Resources\icons\073-add.png" />
+    <None Include="Resources\icons\074-minus.png" />
+    <None Include="Resources\icons\075-equal.png" />
+    <None Include="Resources\icons\076-focus.png" />
+    <None Include="Resources\icons\077-division.png" />
+    <None Include="Resources\icons\078-magic wand.png" />
+    <None Include="Resources\icons\079-calculator.png" />
+    <None Include="Resources\icons\080-calculator.png" />
+    <None Include="Resources\icons\081-checked.png" />
+    <None Include="Resources\icons\082-add.png" />
+    <None Include="Resources\icons\083-substract.png" />
+    <None Include="Resources\icons\084-multiply.png" />
+    <None Include="Resources\icons\085-divide.png" />
+    <None Include="Resources\icons\086-equal.png" />
+    <None Include="Resources\icons\087-menu.png" />
+    <None Include="Resources\icons\088-percent.png" />
+    <None Include="Resources\icons\089-share.png" />
+    <None Include="Resources\icons\090-share.png" />
+    <None Include="Resources\icons\091-share.png" />
+    <None Include="Resources\icons\092-network.png" />
+    <None Include="Resources\icons\093-binoculars.png" />
+    <None Include="Resources\icons\094-checked.png" />
+    <None Include="Resources\icons\095-download.png" />
+    <None Include="Resources\icons\096-upload.png" />
+    <None Include="Resources\icons\097-send.png" />
+    <None Include="Resources\icons\098-menu.png" />
+    <None Include="Resources\icons\099-incoming.png" />
+    <None Include="Resources\icons\100-like.png" />
+    <None Include="Resources\icons\101-dislike.png" />
+    <None Include="Resources\icons\102-infinity.png" />
+    <None Include="Resources\icons\103-wireless internet.png" />
+    <None Include="Resources\icons\104-wifi.png" />
+    <None Include="Resources\icons\105-photos.png" />
+    <None Include="Resources\icons\106-wifi.png" />
+    <None Include="Resources\icons\107-megaphone.png" />
+    <None Include="Resources\icons\108-megaphone.png" />
+    <None Include="Resources\icons\109-menu.png" />
+    <None Include="Resources\icons\110-zoom in.png" />
+    <None Include="Resources\icons\111-idea.png" />
+    <None Include="Resources\icons\112-server.png" />
+    <None Include="Resources\icons\113-server.png" />
+    <None Include="Resources\icons\114-server.png" />
+    <None Include="Resources\icons\115-server.png" />
+    <None Include="Resources\icons\116-database.png" />
+    <None Include="Resources\icons\117-database.png" />
+    <None Include="Resources\icons\118-database.png" />
+    <None Include="Resources\icons\119-database.png" />
+    <None Include="Resources\icons\120-cloud.png" />
+    <None Include="Resources\icons\121-menu.png" />
+    <None Include="Resources\icons\122-cloud computing.png" />
+    <None Include="Resources\icons\123-cloud computing.png" />
+    <None Include="Resources\icons\124-cloud computing.png" />
+    <None Include="Resources\icons\125-cloud computing.png" />
+    <None Include="Resources\icons\126-cloud computing.png" />
+    <None Include="Resources\icons\127-cloud computing.png" />
+    <None Include="Resources\icons\128-like.png" />
+    <None Include="Resources\icons\129-dislike.png" />
+    <None Include="Resources\icons\130-like.png" />
+    <None Include="Resources\icons\131-star.png" />
+    <None Include="Resources\icons\132-tabs.png" />
+    <None Include="Resources\icons\133-star.png" />
+    <None Include="Resources\icons\134-map.png" />
+    <None Include="Resources\icons\135-map.png" />
+    <None Include="Resources\icons\136-map.png" />
+    <None Include="Resources\icons\137-placeholder.png" />
+    <None Include="Resources\icons\138-placeholder.png" />
+    <None Include="Resources\icons\139-placeholder.png" />
+    <None Include="Resources\icons\140-internet.png" />
+    <None Include="Resources\icons\141-radar.png" />
+    <None Include="Resources\icons\142-target.png" />
+    <None Include="Resources\icons\143-windows.png" />
+    <None Include="Resources\icons\144-television.png" />
+    <None Include="Resources\icons\145-hourglass.png" />
+    <None Include="Resources\icons\146-hourglass.png" />
+    <None Include="Resources\icons\147-hourglass.png" />
+    <None Include="Resources\icons\148-hourglass.png" />
+    <None Include="Resources\icons\149-id card.png" />
+    <None Include="Resources\icons\150-id card.png" />
+    <None Include="Resources\icons\151-id card.png" />
+    <None Include="Resources\icons\152-id card.png" />
+    <None Include="Resources\icons\153-id card.png" />
+    <None Include="Resources\icons\154-windows.png" />
+    <None Include="Resources\icons\155-id card.png" />
+    <None Include="Resources\icons\156-battery.png" />
+    <None Include="Resources\icons\157-battery.png" />
+    <None Include="Resources\icons\158-battery.png" />
+    <None Include="Resources\icons\159-battery.png" />
+    <None Include="Resources\icons\160-battery.png" />
+    <None Include="Resources\icons\161-battery.png" />
+    <None Include="Resources\icons\162-battery.png" />
+    <None Include="Resources\icons\163-battery.png" />
+    <None Include="Resources\icons\164-battery.png" />
+    <None Include="Resources\icons\165-layers.png" />
+    <None Include="Resources\icons\166-battery.png" />
+    <None Include="Resources\icons\167-command.png" />
+    <None Include="Resources\icons\168-compose.png" />
+    <None Include="Resources\icons\169-reading.png" />
+    <None Include="Resources\icons\170-flag.png" />
+    <None Include="Resources\icons\171-flag.png" />
+    <None Include="Resources\icons\172-flag.png" />
+    <None Include="Resources\icons\173-flag.png" />
+    <None Include="Resources\icons\174-flag.png" />
+    <None Include="Resources\icons\175-bookmark.png" />
+    <None Include="Resources\icons\176-windows.png" />
+    <None Include="Resources\icons\177-agenda.png" />
+    <None Include="Resources\icons\178-controls.png" />
+    <None Include="Resources\icons\179-controls.png" />
+    <None Include="Resources\icons\180-controls.png" />
+    <None Include="Resources\icons\181-controls.png" />
+    <None Include="Resources\icons\182-controls.png" />
+    <None Include="Resources\icons\183-controls.png" />
+    <None Include="Resources\icons\184-controls.png" />
+    <None Include="Resources\icons\185-controls.png" />
+    <None Include="Resources\icons\186-controls.png" />
+    <None Include="Resources\icons\187-tabs.png" />
+    <None Include="Resources\icons\188-controls.png" />
+    <None Include="Resources\icons\189-umbrella.png" />
+    <None Include="Resources\icons\190-help.png" />
+    <None Include="Resources\icons\191-magnet.png" />
+    <None Include="Resources\icons\192-magnet.png" />
+    <None Include="Resources\icons\193-magnet.png" />
+    <None Include="Resources\icons\194-fingerprint.png" />
+    <None Include="Resources\icons\195-attachment.png" />
+    <None Include="Resources\icons\196-hold.png" />
+    <None Include="Resources\icons\197-diamond.png" />
+    <None Include="Resources\icons\198-windows.png" />
+    <None Include="Resources\icons\199-push pin.png" />
+    <None Include="Resources\icons\200-settings.png" />
+    <None Include="Resources\icons\201-settings.png" />
+    <None Include="Resources\icons\202-settings.png" />
+    <None Include="Resources\icons\203-settings.png" />
+    <None Include="Resources\icons\204-settings.png" />
+    <None Include="Resources\icons\205-settings.png" />
+    <None Include="Resources\icons\206-settings.png" />
+    <None Include="Resources\icons\207-settings.png" />
+    <None Include="Resources\icons\208-settings.png" />
+    <None Include="Resources\icons\209-windows.png" />
+    <None Include="Resources\icons\210-settings.png" />
+    <None Include="Resources\icons\211-gift.png" />
+    <None Include="Resources\icons\212-alarm.png" />
+    <None Include="Resources\icons\213-alarm.png" />
+    <None Include="Resources\icons\214-worldwide.png" />
+    <None Include="Resources\icons\215-funnel.png" />
+    <None Include="Resources\icons\216-key.png" />
+    <None Include="Resources\icons\217-worldwide.png" />
+    <None Include="Resources\icons\218-edit.png" />
+    <None Include="Resources\icons\219-fax.png" />
+    <None Include="Resources\icons\220-layers.png" />
+    <None Include="Resources\icons\221-zoom out.png" />
+    <None Include="Resources\icons\222-print.png" />
+    <None Include="Resources\icons\223-clock.png" />
+    <None Include="Resources\icons\224-clock.png" />
+    <None Include="Resources\icons\225-alarm clock.png" />
+    <None Include="Resources\icons\226-alarm clock.png" />
+    <None Include="Resources\icons\227-time.png" />
+    <None Include="Resources\icons\228-stopwatch.png" />
+    <None Include="Resources\icons\229-stopwatch.png" />
+    <None Include="Resources\icons\230-stopwatch.png" />
+    <None Include="Resources\icons\231-stopwatch.png" />
+    <None Include="Resources\icons\232-albums.png" />
+    <None Include="Resources\icons\233-stopwatch.png" />
+    <None Include="Resources\icons\234-folder.png" />
+    <None Include="Resources\icons\235-folder.png" />
+    <None Include="Resources\icons\236-folder.png" />
+    <None Include="Resources\icons\237-folder.png" />
+    <None Include="Resources\icons\238-folder.png" />
+    <None Include="Resources\icons\239-folder.png" />
+    <None Include="Resources\icons\240-folder.png" />
+    <None Include="Resources\icons\241-folder.png" />
+    <None Include="Resources\icons\242-folder.png" />
+    <None Include="Resources\icons\243-garbage.png" />
+    <None Include="Resources\icons\244-folder.png" />
+    <None Include="Resources\icons\245-folder.png" />
+    <None Include="Resources\icons\246-folder.png" />
+    <None Include="Resources\icons\247-folder.png" />
+    <None Include="Resources\icons\248-folder.png" />
+    <None Include="Resources\icons\249-folder.png" />
+    <None Include="Resources\icons\250-folder.png" />
+    <None Include="Resources\icons\251-folder.png" />
+    <None Include="Resources\icons\252-folder.png" />
+    <None Include="Resources\icons\253-folder.png" />
+    <None Include="Resources\icons\254-garbage.png" />
+    <None Include="Resources\icons\255-folder.png" />
+    <None Include="Resources\icons\256-file.png" />
+    <None Include="Resources\icons\257-file.png" />
+    <None Include="Resources\icons\258-list.png" />
+    <None Include="Resources\icons\259-document.png" />
+    <None Include="Resources\icons\260-resume.png" />
+    <None Include="Resources\icons\261-diploma.png" />
+    <None Include="Resources\icons\262-file.png" />
+    <None Include="Resources\icons\263-notepad.png" />
+    <None Include="Resources\icons\264-notepad.png" />
+    <None Include="Resources\icons\265-garbage.png" />
+    <None Include="Resources\icons\266-notepad.png" />
+    <None Include="Resources\icons\267-note.png" />
+    <None Include="Resources\icons\268-calendar.png" />
+    <None Include="Resources\icons\269-calendar.png" />
+    <None Include="Resources\icons\270-calendar.png" />
+    <None Include="Resources\icons\271-calendar.png" />
+    <None Include="Resources\icons\272-blueprint.png" />
+    <None Include="Resources\icons\273-calendar.png" />
+    <None Include="Resources\icons\274-calendar.png" />
+    <None Include="Resources\icons\275-bookmark.png" />
+    <None Include="Resources\icons\276-trash.png" />
+    <None Include="Resources\icons\277-newspaper.png" />
+    <None Include="Resources\icons\278-list.png" />
+    <None Include="Resources\icons\279-edit.png" />
+    <None Include="Resources\icons\280-notebook.png" />
+    <None Include="Resources\icons\281-notebook.png" />
+    <None Include="Resources\icons\282-notebook.png" />
+    <None Include="Resources\icons\283-notebook.png" />
+    <None Include="Resources\icons\284-notebook.png" />
+    <None Include="Resources\icons\285-notebook.png" />
+    <None Include="Resources\icons\286-calendar.png" />
+    <None Include="Resources\icons\287-link.png" />
+    <None Include="Resources\icons\288-calendar.png" />
+    <None Include="Resources\icons\289-smartphone.png" />
+    <None Include="Resources\icons\290-smartphone.png" />
+    <None Include="Resources\icons\291-smartphone.png" />
+    <None Include="Resources\icons\292-smartphone.png" />
+    <None Include="Resources\icons\293-smartphone.png" />
+    <None Include="Resources\icons\294-smartphone.png" />
+    <None Include="Resources\icons\295-smartphone.png" />
+    <None Include="Resources\icons\296-smartphone.png" />
+    <None Include="Resources\icons\297-smartphone.png" />
+    <None Include="Resources\icons\298-unlink.png" />
+    <None Include="Resources\icons\299-smartphone.png" />
+    <None Include="Resources\icons\300-smartphone.png" />
+    <None Include="Resources\icons\301-smartphone.png" />
+    <None Include="Resources\icons\302-spotlight.png" />
+    <None Include="Resources\icons\303-lamp.png" />
+    <None Include="Resources\icons\304-archive.png" />
+    <None Include="Resources\icons\305-archive.png" />
+    <None Include="Resources\icons\306-archive.png" />
+    <None Include="Resources\icons\307-archive.png" />
+    <None Include="Resources\icons\308-price tag.png" />
+    <None Include="Resources\icons\309-broken link.png" />
+    <None Include="Resources\icons\310-briefcase.png" />
+    <None Include="Resources\icons\311-app.png" />
+    <None Include="Resources\icons\312-notification.png" />
+    <None Include="Resources\icons\313-search.png" />
+    <None Include="Resources\icons\314-menu.png" />
+    <None Include="Resources\icons\315-more.png" />
+    <None Include="Resources\icons\316-more.png" />
+    <None Include="Resources\icons\317-bluetooth.png" />
+    <None Include="Resources\icons\318-bluetooth.png" />
+    <None Include="Resources\icons\319-exit.png" />
+    <None Include="Resources\icons\320-login.png" />
+    <None Include="Resources\icons\321-exit.png" />
+    <None Include="Resources\icons\322-exit.png" />
+    <None Include="Resources\icons\323-add.png" />
+    <None Include="Resources\icons\324-search.png" />
+    <None Include="Resources\icons\325-close.png" />
+    <None Include="Resources\icons\326-switch.png" />
+    <None Include="Resources\icons\327-switch.png" />
+    <None Include="Resources\icons\328-switch.png" />
+    <None Include="Resources\icons\329-switch.png" />
+    <None Include="Resources\icons\330-volume control.png" />
+    <None Include="Resources\icons\331-volume control.png" />
+    <None Include="Resources\icons\332-switch.png" />
+    <None Include="Resources\icons\333-switch.png" />
+    <None Include="Resources\icons\334-switch.png" />
+    <None Include="Resources\icons\335-home.png" />
+    <None Include="Resources\icons\336-switch.png" />
+    <None Include="Resources\icons\337-lock.png" />
+    <None Include="Resources\icons\338-lock.png" />
+    <None Include="Resources\icons\339-microphone.png" />
+    <None Include="Resources\icons\340-muted.png" />
+    <None Include="Resources\icons\341-microphone.png" />
+    <None Include="Resources\icons\342-navigation.png" />
+    <None Include="Resources\icons\343-navigation.png" />
+    <None Include="Resources\icons\344-compass.png" />
+    <None Include="Resources\icons\345-more.png" />
+    <None Include="Resources\icons\346-home.png" />
+    <None Include="Resources\icons\347-route.png" />
+    <None Include="Resources\icons\348-street.png" />
+    <None Include="Resources\icons\349-street.png" />
+    <None Include="Resources\icons\350-sign.png" />
+    <None Include="Resources\icons\351-sign.png" />
+    <None Include="Resources\icons\352-pin.png" />
+    <None Include="Resources\icons\353-placeholder.png" />
+    <None Include="Resources\icons\354-map location.png" />
+    <None Include="Resources\icons\355-placeholders.png" />
+    <None Include="Resources\icons\356-paper plane.png" />
+    <None Include="Resources\icons\357-home.png" />
+    <None Include="Resources\icons\358-paper plane.png" />
+    <None Include="Resources\icons\359-users.png" />
+    <None Include="Resources\icons\360-users.png" />
+    <None Include="Resources\icons\361-user.png" />
+    <None Include="Resources\icons\362-user.png" />
+    <None Include="Resources\icons\363-user.png" />
+    <None Include="Resources\icons\364-user.png" />
+    <None Include="Resources\icons\365-user.png" />
+    <None Include="Resources\icons\366-user.png" />
+    <None Include="Resources\icons\367-user.png" />
+    <None Include="Resources\icons\368-house.png" />
+    <None Include="Resources\icons\369-user.png" />
+    <None Include="Resources\icons\370-locked.png" />
+    <None Include="Resources\icons\371-locked.png" />
+    <None Include="Resources\icons\372-locked.png" />
+    <None Include="Resources\icons\373-locked.png" />
+    <None Include="Resources\icons\374-locked.png" />
+    <None Include="Resources\icons\375-unlocked.png" />
+    <None Include="Resources\icons\376-locked.png" />
+    <None Include="Resources\icons\377-unlocked.png" />
+    <None Include="Resources\icons\378-locked.png" />
+    <None Include="Resources\icons\379-eyeglasses.png" />
+    <Content Include="SisIg.ico" />
+    <None Include="Resources\heart-128.png" />
+    <None Include="Resources\clock-128.png" />
+    <None Include="Resources\humans-128.png" />
+    <None Include="Resources\note-128.png" />
+    <None Include="Resources\running-128.png" />
+    <None Include="Resources\dev-128.png" />
+    <None Include="Resources\download-128.png" />
+    <None Include="Resources\key-128.png" />
+    <None Include="Resources\briefcase-128.png" />
+    <None Include="Resources\menu-48.png" />
+    <None Include="Resources\case-48.png" />
+    <None Include="Resources\rpt2.png" />
+    <None Include="Resources\rpt.png" />
+    <None Include="Resources\money-32.png" />
+    <None Include="Resources\brush-pencil-48.png" />
+    <None Include="Resources\rpt %287%29.png" />
+    <None Include="Resources\rpt %286%29.png" />
+    <None Include="Resources\rpt %285%29.png" />
+    <None Include="Resources\rpt %284%29.png" />
+    <None Include="Resources\rpt %283%29.png" />
+    <None Include="Resources\rpt %282%29.png" />
+    <None Include="Resources\rpt %281%29.png" />
+    <None Include="Resources\polaroids-48.png" />
+    <None Include="Resources\news-32.png" />
+    <None Include="Resources\bcake-32.png" />
+    <None Include="Resources\booklet-32.png" />
+    <None Include="Resources\calendar-32.png" />
+    <None Include="Resources\clipboard-32.png" />
+    <None Include="Resources\document-32.png" />
+    <None Include="Resources\documents-32.png" />
+    <None Include="Resources\graphs-32.png" />
+    <None Include="Resources\profle-32.png" />
+    <None Include="Resources\trends-32.png" />
+    <None Include="Resources\menu-16.png" />
+    <None Include="Resources\conversa-24.png" />
+    <None Include="Resources\checklist-32.png" />
+    <None Include="Resources\report-32.png" />
+    <None Include="Resources\members-32.png" />
+    <None Include="Resources\professor-32.png" />
+    <None Include="Resources\classe-32.png" />
+    <None Include="Resources\data-32.png" />
+    <None Include="Resources\data-48.png" />
+    <None Include="Resources\eye-24.png" />
+    <None Include="Resources\uncheck-24.png" />
+    <None Include="Resources\check-24.png" />
+    <None Include="Resources\conversa-48.png" />
+    <None Include="Resources\conversa-32.png" />
+    <None Include="Resources\eye-48.png" />
+    <None Include="Resources\book-32.png" />
+    <None Include="Resources\add-24.png" />
+    <None Include="Resources\booklet-48.png" />
+    <None Include="Resources\filtrar-24.png" />
+    <None Include="Resources\download-32.png" />
+    <None Include="Resources\piechart-24.png" />
+    <None Include="Resources\graphs-24.png" />
+    <None Include="Resources\document-24.png" />
+    <None Include="Resources\clipboard-24.png" />
+    <None Include="Resources\calendar-24.png" />
+    <None Include="Resources\bcake-24.png" />
+    <None Include="Resources\calendar-48.png" />
+    <None Include="Resources\star-48.png" />
+    <None Include="Resources\bcake-48.png" />
+    <None Include="Resources\templo.png" />
+    <None Include="Resources\report-48.png" />
+    <None Include="Resources\graphs-48.png" />
+    <None Include="Resources\key-24.png" />
+    <None Include="Resources\saida-24.png" />
+    <None Include="Resources\entrada-24.png" />
+    <None Include="Resources\clipboard-48.png" />
+    <None Include="Resources\documents-48.png" />
+    <None Include="Resources\document-48.png" />
+    <None Include="Resources\piechart-48.png" />
+    <None Include="Resources\profle-48.png" />
+    <None Include="Resources\piechart-32.png" />
+    <None Include="Resources\stack-32.png" />
+    <None Include="Resources\save-48.png" />
+    <None Include="Resources\dev-48.png" />
+    <None Include="Resources\youtube.png" />
+    <None Include="Resources\site.png" />
+    <None Include="Resources\face.png" />
+    <None Include="Resources\image-48.png" />
+    <None Include="Resources\cancel-24.png" />
+    <None Include="Resources\compose-24.png" />
+    <None Include="Resources\refresh-24.png" />
+    <None Include="Resources\refresh-48.png" />
+    <None Include="Resources\compose-48.png" />
+    <None Include="Resources\unlocked-24.png" />
+    <None Include="Resources\locked-24.png" />
+    <None Include="Resources\tools-48.png" />
+    <None Include="Resources\stop-24.png" />
+    <None Include="Resources\saida-48.png" />
+    <None Include="Resources\printer-48.png" />
+    <None Include="Resources\pencil-24.png" />
+    <None Include="Resources\money-48.png" />
+    <None Include="Resources\members-48.png" />
+    <None Include="Resources\entrada-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este projeto faz referência a pacotes do NuGet que não estão presentes neste computador. Use a Restauração de Pacotes do NuGet para baixá-los.  Para obter mais informações, consulte http://go.microsoft.com/fwlink/?LinkID=322105. O arquivo ausente é {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.113.1\build\net46\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.113.1\build\net46\System.Data.SQLite.Core.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.113.1\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.113.1\build\net46\System.Data.SQLite.Core.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

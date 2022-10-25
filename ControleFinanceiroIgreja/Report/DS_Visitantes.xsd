@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_Visitantes" targetNamespace="http://tempuri.org/DS_Visitantes.xsd" xmlns:mstns="http://tempuri.org/DS_Visitantes.xsd" xmlns="http://tempuri.org/DS_Visitantes.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_Visitantes" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_Visitantes" msprop:Generator_UserDSName="DS_Visitantes">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DTVisitantes" msprop:Generator_TableClassName="DTVisitantesDataTable" msprop:Generator_TableVarName="tableDTVisitantes" msprop:Generator_TablePropName="DTVisitantes" msprop:Generator_RowDeletingName="DTVisitantesRowDeleting" msprop:Generator_RowChangingName="DTVisitantesRowChanging" msprop:Generator_RowEvHandlerName="DTVisitantesRowChangeEventHandler" msprop:Generator_RowDeletedName="DTVisitantesRowDeleted" msprop:Generator_UserTableName="DTVisitantes" msprop:Generator_RowChangedName="DTVisitantesRowChanged" msprop:Generator_RowEvArgName="DTVisitantesRowChangeEvent" msprop:Generator_RowClassName="DTVisitantesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" minOccurs="0" />
+              <xs:element name="Nome" msprop:Generator_ColumnVarNameInTable="columnNome" msprop:Generator_ColumnPropNameInRow="Nome" msprop:Generator_ColumnPropNameInTable="NomeColumn" msprop:Generator_UserColumnName="Nome" type="xs:string" minOccurs="0" />
+              <xs:element name="DtNasc" msprop:Generator_ColumnVarNameInTable="columnDtNasc" msprop:Generator_ColumnPropNameInRow="DtNasc" msprop:Generator_ColumnPropNameInTable="DtNascColumn" msprop:Generator_UserColumnName="DtNasc" type="xs:string" minOccurs="0" />
+              <xs:element name="Última" msprop:Generator_ColumnVarNameInTable="columnÚltima" msprop:Generator_ColumnPropNameInRow="Última" msprop:Generator_ColumnPropNameInTable="ÚltimaColumn" msprop:Generator_UserColumnName="Última" type="xs:string" minOccurs="0" />
+              <xs:element name="Recebidas" msprop:Generator_ColumnVarNameInTable="columnRecebidas" msprop:Generator_ColumnPropNameInRow="Recebidas" msprop:Generator_ColumnPropNameInTable="RecebidasColumn" msprop:Generator_UserColumnName="Recebidas" type="xs:string" minOccurs="0" />
+              <xs:element name="Realizadas" msprop:Generator_ColumnVarNameInTable="columnRealizadas" msprop:Generator_ColumnPropNameInRow="Realizadas" msprop:Generator_ColumnPropNameInTable="RealizadasColumn" msprop:Generator_UserColumnName="Realizadas" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

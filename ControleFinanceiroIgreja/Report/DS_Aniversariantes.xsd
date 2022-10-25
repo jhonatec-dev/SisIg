@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_Aniversariantes" targetNamespace="http://tempuri.org/DS_Aniversariantes.xsd" xmlns:mstns="http://tempuri.org/DS_Aniversariantes.xsd" xmlns="http://tempuri.org/DS_Aniversariantes.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_Aniversariantes" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_Aniversariantes" msprop:Generator_UserDSName="DS_Aniversariantes">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DtAniversariantes" msprop:Generator_TableClassName="DtAniversariantesDataTable" msprop:Generator_TableVarName="tableDtAniversariantes" msprop:Generator_RowChangedName="DtAniversariantesRowChanged" msprop:Generator_TablePropName="DtAniversariantes" msprop:Generator_RowDeletingName="DtAniversariantesRowDeleting" msprop:Generator_RowChangingName="DtAniversariantesRowChanging" msprop:Generator_RowEvHandlerName="DtAniversariantesRowChangeEventHandler" msprop:Generator_RowDeletedName="DtAniversariantesRowDeleted" msprop:Generator_RowClassName="DtAniversariantesRow" msprop:Generator_UserTableName="DtAniversariantes" msprop:Generator_RowEvArgName="DtAniversariantesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NOME" msprop:Generator_ColumnVarNameInTable="columnNOME" msprop:Generator_ColumnPropNameInRow="NOME" msprop:Generator_ColumnPropNameInTable="NOMEColumn" msprop:Generator_UserColumnName="NOME" type="xs:string" minOccurs="0" />
+              <xs:element name="NASCIMENTO" msprop:Generator_ColumnVarNameInTable="columnNASCIMENTO" msprop:Generator_ColumnPropNameInRow="NASCIMENTO" msprop:Generator_ColumnPropNameInTable="NASCIMENTOColumn" msprop:Generator_UserColumnName="NASCIMENTO" type="xs:int" minOccurs="0" />
+              <xs:element name="CASAMENTO" msprop:Generator_ColumnVarNameInTable="columnCASAMENTO" msprop:Generator_ColumnPropNameInRow="CASAMENTO" msprop:Generator_ColumnPropNameInTable="CASAMENTOColumn" msprop:Generator_UserColumnName="CASAMENTO" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
