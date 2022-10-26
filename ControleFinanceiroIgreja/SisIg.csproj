@@ -407,6 +407,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Report\DSEntradasGeral.cs">
+      <DependentUpon>DSEntradasGeral.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Report\DSEntradasGeral.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

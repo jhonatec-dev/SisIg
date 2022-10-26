@@ -279,7 +279,7 @@ namespace ControleFinanceiroIgreja.Report {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class DtEntradasGeralDataTable : global::System.Data.TypedTableBase<DtEntradasGeralRow> {
             
-            private global::System.Data.DataColumn columnDescricao;
+            private global::System.Data.DataColumn columnDESCRICAO;
             
             private global::System.Data.DataColumn columnTotal;
             
@@ -318,9 +318,9 @@ namespace ControleFinanceiroIgreja.Report {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn DescricaoColumn {
+            public global::System.Data.DataColumn DESCRICAOColumn {
                 get {
-                    return this.columnDescricao;
+                    return this.columnDESCRICAO;
                 }
             }
             
@@ -369,10 +369,10 @@ namespace ControleFinanceiroIgreja.Report {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DtEntradasGeralRow AddDtEntradasGeralRow(string Descricao, string Total) {
+            public DtEntradasGeralRow AddDtEntradasGeralRow(string DESCRICAO, string Total) {
                 DtEntradasGeralRow rowDtEntradasGeralRow = ((DtEntradasGeralRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Descricao,
+                        DESCRICAO,
                         Total};
                 rowDtEntradasGeralRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDtEntradasGeralRow);
@@ -396,15 +396,15 @@ namespace ControleFinanceiroIgreja.Report {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnDescricao = base.Columns["Descricao"];
+                this.columnDESCRICAO = base.Columns["DESCRICAO"];
                 this.columnTotal = base.Columns["Total"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnDescricao = new global::System.Data.DataColumn("Descricao", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDescricao);
+                this.columnDESCRICAO = new global::System.Data.DataColumn("DESCRICAO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDESCRICAO);
                 this.columnTotal = new global::System.Data.DataColumn("Total", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTotal);
             }
@@ -549,17 +549,17 @@ namespace ControleFinanceiroIgreja.Report {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Descricao {
+            public string DESCRICAO {
                 get {
                     try {
-                        return ((string)(this[this.tableDtEntradasGeral.DescricaoColumn]));
+                        return ((string)(this[this.tableDtEntradasGeral.DESCRICAOColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Descricao\' na tabela \'DtEntradasGeral\' é DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'DESCRICAO\' na tabela \'DtEntradasGeral\' é DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDtEntradasGeral.DescricaoColumn] = value;
+                    this[this.tableDtEntradasGeral.DESCRICAOColumn] = value;
                 }
             }
             
@@ -581,14 +581,14 @@ namespace ControleFinanceiroIgreja.Report {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsDescricaoNull() {
-                return this.IsNull(this.tableDtEntradasGeral.DescricaoColumn);
+            public bool IsDESCRICAONull() {
+                return this.IsNull(this.tableDtEntradasGeral.DESCRICAOColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetDescricaoNull() {
-                this[this.tableDtEntradasGeral.DescricaoColumn] = global::System.Convert.DBNull;
+            public void SetDESCRICAONull() {
+                this[this.tableDtEntradasGeral.DESCRICAOColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

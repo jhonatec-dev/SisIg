@@ -13,20 +13,20 @@ namespace ControleFinanceiroIgreja.DAO
 
             if (cat.id == 0)
             {
-                cmd = new SQLiteCommand("INSERT INTO TbCatSaida ([DESC])" +
-                    "  VALUES(@DESC)", con);
+                cmd = new SQLiteCommand("INSERT INTO TbCat_Saida (DESCRICAO)" +
+                    "  VALUES(@DESCRICAO)", con);
             }
             else
             {
-                cmd = new SQLiteCommand("UPDATE TbCatSaida" +
-                    " SET[DESC] = @DESC" +
+                cmd = new SQLiteCommand("UPDATE TbCat_Saida" +
+                    " SET DESCRICAO = @DESCRICAO" +
                     " WHERE ID = @ID", con);
 
             }
 
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.AddWithValue("@ID", cat.id);
-            cmd.Parameters.AddWithValue("@Desc", cat.desc);
+            cmd.Parameters.AddWithValue("@Descricao", cat.desc);
 
             cmd.ExecuteNonQuery();
 
@@ -76,8 +76,8 @@ namespace ControleFinanceiroIgreja.DAO
 
         public DataTable listaCatSaida(SQLiteConnection con)
         {
-            string strSql = @" SELECT  Id, [Desc] as 'Descrição'" +
-                            @" from TbCatSaida";
+            string strSql = @" SELECT  Id, DESCRICAO as 'Descrição'" +
+                            @" from TbCat_Saida";
             SQLiteCommand cmd = new SQLiteCommand(strSql, con);
             SQLiteDataAdapter da = new SQLiteDataAdapter();
             DataTable dt = new DataTable();
@@ -99,13 +99,13 @@ namespace ControleFinanceiroIgreja.DAO
 
             if (sai.id == 0)
             {
-                cmd = new SQLiteCommand("INSERT INTO TbSaida(IDCAT, VALOR, DATA, OBS)" +
+                cmd = new SQLiteCommand("INSERT INTO TbSaida(IDCAT_SAIDA, VALOR, DATA, OBS)" +
                     " VALUES(@IDCATEGORIA, @VALOR, @DATA, @OBS)", con);
             }
             else
             {
                 cmd = new SQLiteCommand("UPDATE TbSaida" +
-                    "  SET IDCAT = @IDCATEGORIA," +
+                    "  SET IDCAT_SAIDA = @IDCATEGORIA," +
                     " VALOR = @VALOR," +
                     " DATA = @DATA," +
                     " OBS = @OBS " +
@@ -153,7 +153,7 @@ namespace ControleFinanceiroIgreja.DAO
 
         public int getIdCatSaida(SQLiteConnection con, int idSaida)
         {
-            string strSql = @" SELECT  IdCat " +
+            string strSql = @" SELECT  IdCat_saida " +
                             @" from TbSaida " +
                             @" where Id = " + idSaida; //adicionar where year()=@yy and month()=@mm
             SQLiteCommand cmd = new SQLiteCommand(strSql, con);
@@ -168,13 +168,13 @@ namespace ControleFinanceiroIgreja.DAO
 
 
 
-            return (Convert.ToInt32(dt.Rows[0]["IdCat"].ToString()));
+            return (Convert.ToInt32(dt.Rows[0]["IdCat_saida"].ToString()));
 
         }
 
         public DataTable listaSaidaGeral(SQLiteConnection con, int ano, int mes)
         {
-            string strSql = " SELECT  Descricao, " +
+            string strSql = " SELECT DESCRICAO AS 'Descricao', " +
                             " round(Sum(Valor), 2) as 'Total' " +
                             " from VWSaidas " +
                             " where CAST(STRFTIME('%Y', DATA) AS INTEGER) = @ano " +
@@ -197,7 +197,7 @@ namespace ControleFinanceiroIgreja.DAO
 
         public DataTable listaSaidaGeralAno(SQLiteConnection con, int ano, int mes)
         {
-            string strSql = " SELECT  Descricao, " +
+            string strSql = " SELECT DESCRICAO AS 'Descricao', " +
                             " ROUND(Sum(Valor), 2) as 'Total' " +
                             " from VwSaidas " +
                             " where DATA BETWEEN @dtIni AND @dtFim " +

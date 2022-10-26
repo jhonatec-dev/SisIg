@@ -41,7 +41,7 @@ namespace ControleFinanceiroIgreja.DAO
                             " LEFT JOIN TbMembros M " +
                             " ON E.IDMEMBRO = M.ID " +
                             " WHERE " +
-                            " E.IDCAT = @idCat" +
+                            " E.IDCAT_ENTRADA = @idCat" +
                             " AND CAST(STRFTIME('%Y', E.DATA) AS INTEGER) = @ano" +
                             " AND CAST(STRFTIME('%m',E.DATA) AS INTEGER) = @mes" +
                             " ORDER BY M.NOME";
@@ -394,55 +394,55 @@ ORDER BY M.NOME
         {
             string strSql = "SELECT M.Nome as 'Membro', " +
               " (SELECT ROUND(SUM(E.VALOR), 2) FROM TbEntrada E " +
-              "  WHERE M.ID = E.IDMEMBRO AND E.IDCAT = @IdCat " +
+              "  WHERE M.ID = E.IDMEMBRO AND E.IDCAT_ENTRADA = @IdCat " +
               "    AND CAST (STRFTIME('%Y', E.DATA) AS INTEGER) = @ANO " +
               "    AND CAST(STRFTIME('%m', E.DATA) AS INTEGER) = 1) AS 'Jan',"+
               " (SELECT ROUND(SUM(E.VALOR), 2) FROM TbEntrada E " +
-              "  WHERE M.ID = E.IDMEMBRO AND E.IDCAT = @IdCat " +
+              "  WHERE M.ID = E.IDMEMBRO AND E.IDCAT_ENTRADA = @IdCat " +
               "    AND CAST (STRFTIME('%Y', E.DATA) AS INTEGER) = @ANO " +
               "    AND CAST(STRFTIME('%m', E.DATA) AS INTEGER) = 2) AS 'Fev'," +
               " (SELECT ROUND(SUM(E.VALOR), 2) FROM TbEntrada E " +
-              "  WHERE M.ID = E.IDMEMBRO AND E.IDCAT = @IdCat " +
+              "  WHERE M.ID = E.IDMEMBRO AND E.IDCAT_ENTRADA = @IdCat " +
               "    AND CAST (STRFTIME('%Y', E.DATA) AS INTEGER) = @ANO " +
               "    AND CAST(STRFTIME('%m', E.DATA) AS INTEGER) = 3) AS 'Mar'," +
               " (SELECT ROUND(SUM(E.VALOR), 2) FROM TbEntrada E " +
-              "  WHERE M.ID = E.IDMEMBRO AND E.IDCAT = @IdCat " +
+              "  WHERE M.ID = E.IDMEMBRO AND E.IDCAT_ENTRADA = @IdCat " +
               "    AND CAST (STRFTIME('%Y', E.DATA) AS INTEGER) = @ANO " +
               "    AND CAST(STRFTIME('%m', E.DATA) AS INTEGER) = 4) AS 'Abr'," +
               " (SELECT ROUND(SUM(E.VALOR), 2) FROM TbEntrada E " +
-              "  WHERE M.ID = E.IDMEMBRO AND E.IDCAT = @IdCat " +
+              "  WHERE M.ID = E.IDMEMBRO AND E.IDCAT_ENTRADA = @IdCat " +
               "    AND CAST (STRFTIME('%Y', E.DATA) AS INTEGER) = @ANO " +
               "    AND CAST(STRFTIME('%m', E.DATA) AS INTEGER) = 5) AS 'Mai'," +
               " (SELECT ROUND(SUM(E.VALOR), 2) FROM TbEntrada E " +
-              "  WHERE M.ID = E.IDMEMBRO AND E.IDCAT = @IdCat " +
+              "  WHERE M.ID = E.IDMEMBRO AND E.IDCAT_ENTRADA = @IdCat " +
               "    AND CAST (STRFTIME('%Y', E.DATA) AS INTEGER) = @ANO " +
               "    AND CAST(STRFTIME('%m', E.DATA) AS INTEGER) = 6) AS 'Jun'," +
               " (SELECT ROUND(SUM(E.VALOR), 2) FROM TbEntrada E " +
-              "  WHERE M.ID = E.IDMEMBRO AND E.IDCAT = @IdCat " +
+              "  WHERE M.ID = E.IDMEMBRO AND E.IDCAT_ENTRADA = @IdCat " +
               "    AND CAST (STRFTIME('%Y', E.DATA) AS INTEGER) = @ANO " +
               "    AND CAST(STRFTIME('%m', E.DATA) AS INTEGER) = 7) AS 'Jul'," +
               " (SELECT ROUND(SUM(E.VALOR), 2) FROM TbEntrada E " +
-              "  WHERE M.ID = E.IDMEMBRO AND E.IDCAT = @IdCat " +
+              "  WHERE M.ID = E.IDMEMBRO AND E.IDCAT_ENTRADA = @IdCat " +
               "    AND CAST (STRFTIME('%Y', E.DATA) AS INTEGER) = @ANO " +
               "    AND CAST(STRFTIME('%m', E.DATA) AS INTEGER) = 8) AS 'Ago'," +
               " (SELECT ROUND(SUM(E.VALOR), 2) FROM TbEntrada E " +
-              "  WHERE M.ID = E.IDMEMBRO AND E.IDCAT = @IdCat " +
+              "  WHERE M.ID = E.IDMEMBRO AND E.IDCAT_ENTRADA = @IdCat " +
               "    AND CAST (STRFTIME('%Y', E.DATA) AS INTEGER) = @ANO " +
               "    AND CAST(STRFTIME('%m', E.DATA) AS INTEGER) = 9) AS 'Set'," +
               " (SELECT ROUND(SUM(E.VALOR), 2) FROM TbEntrada E " +
-              "  WHERE M.ID = E.IDMEMBRO AND E.IDCAT = @IdCat " +
+              "  WHERE M.ID = E.IDMEMBRO AND E.IDCAT_ENTRADA = @IdCat " +
               "    AND CAST (STRFTIME('%Y', E.DATA) AS INTEGER) = @ANO " +
               "    AND CAST(STRFTIME('%m', E.DATA) AS INTEGER) = 10) AS 'Out'," +
               " (SELECT ROUND(SUM(E.VALOR), 2) FROM TbEntrada E " +
-              "  WHERE M.ID = E.IDMEMBRO AND E.IDCAT = @IdCat " +
+              "  WHERE M.ID = E.IDMEMBRO AND E.IDCAT_ENTRADA = @IdCat " +
               "    AND CAST (STRFTIME('%Y', E.DATA) AS INTEGER) = @ANO " +
               "    AND CAST(STRFTIME('%m', E.DATA) AS INTEGER) = 11) AS 'Nov'," +
               " (SELECT ROUND(SUM(E.VALOR), 2) FROM TbEntrada E " +
-              "  WHERE M.ID = E.IDMEMBRO AND E.IDCAT = @IdCat " +
+              "  WHERE M.ID = E.IDMEMBRO AND E.IDCAT_ENTRADA = @IdCat " +
               "    AND CAST (STRFTIME('%Y', E.DATA) AS INTEGER) = @ANO " +
               "    AND CAST(STRFTIME('%m', E.DATA) AS INTEGER) = 12) AS 'Dez'," +
               " (SELECT ROUND(SUM(E.VALOR), 2) FROM TbEntrada E " +
-              " WHERE M.ID = E.IDMEMBRO AND E.IDCAT = @IdCat" +
+              " WHERE M.ID = E.IDMEMBRO AND E.IDCAT_ENTRADA = @IdCat" +
               " AND CAST(STRFTIME('%Y', E.DATA) AS INTEGER) = @ANO) AS 'Total'" +
            " FROM TbMembros M ORDER BY M.NOME ";
             SQLiteCommand cmd = new SQLiteCommand(strSql, con);
@@ -464,98 +464,98 @@ ORDER BY M.NOME
         public DataTable entradasMembro(SQLiteConnection con, int ano, int idMembro)
         {
             string strSql = @"SELECT
-                      CE.[DESC] as 'CATEGORIA' ,
+                      CE.DESCRICAO as 'CATEGORIA' ,
                       (SELECT
                         SUM(VALOR)
                       FROM TbEntrada E
-                      WHERE E.IDCAT = CE.ID
+                      WHERE E.IDCAT_ENTRADA = CE.ID
                       AND E.IDMEMBRO = @IDMEMBRO
                       AND CAST(STRFTIME('%Y', E.DATA) AS INTEGER) = @ANO
                       AND CAST(STRFTIME('%m', E.DATA) AS INTEGER) = 1) AS 'Jan',
                       (SELECT
                         SUM(VALOR)
                       FROM TbEntrada E
-                      WHERE E.IDCAT = CE.ID
+                      WHERE E.IDCAT_ENTRADA = CE.ID
                       AND E.IDMEMBRO = @IDMEMBRO
                       AND CAST(STRFTIME('%Y', E.DATA) AS INTEGER) = @ANO
                       AND CAST(STRFTIME('%m', E.DATA) AS INTEGER) = 2) AS 'Fev',
                       (SELECT
                         SUM(VALOR)
                       FROM TbEntrada E
-                      WHERE E.IDCAT = CE.ID
+                      WHERE E.IDCAT_ENTRADA = CE.ID
                       AND E.IDMEMBRO = @IDMEMBRO
                       AND CAST(STRFTIME('%Y', E.DATA) AS INTEGER) = @ANO
                       AND CAST(STRFTIME('%m', E.DATA) AS INTEGER) = 3) AS 'Mar',
                       (SELECT
                         SUM(VALOR)
                       FROM TbEntrada E
-                      WHERE E.IDCAT = CE.ID
+                      WHERE E.IDCAT_ENTRADA = CE.ID
                       AND E.IDMEMBRO = @IDMEMBRO
                       AND CAST(STRFTIME('%Y', E.DATA) AS INTEGER) = @ANO
                       AND CAST(STRFTIME('%m', E.DATA) AS INTEGER) = 4) AS 'Abr',
                       (SELECT
                         SUM(VALOR)
                       FROM TbEntrada E
-                      WHERE E.IDCAT = CE.ID
+                      WHERE E.IDCAT_ENTRADA = CE.ID
                       AND E.IDMEMBRO = @IDMEMBRO
                       AND CAST(STRFTIME('%Y', E.DATA) AS INTEGER) = @ANO
                       AND CAST(STRFTIME('%m', E.DATA) AS INTEGER) = 5) AS 'Mai',
                       (SELECT
                         SUM(VALOR)
                       FROM TbEntrada E
-                      WHERE E.IDCAT = CE.ID
+                      WHERE E.IDCAT_ENTRADA = CE.ID
                       AND E.IDMEMBRO = @IDMEMBRO
                       AND CAST(STRFTIME('%Y', E.DATA) AS INTEGER) = @ANO
                       AND CAST(STRFTIME('%m', E.DATA) AS INTEGER) = 6) AS 'Jun',
                       (SELECT
                         SUM(VALOR)
                       FROM TbEntrada E
-                      WHERE E.IDCAT = CE.ID
+                      WHERE E.IDCAT_ENTRADA = CE.ID
                       AND E.IDMEMBRO = @IDMEMBRO
                       AND CAST(STRFTIME('%Y', E.DATA) AS INTEGER) = @ANO
                       AND CAST(STRFTIME('%m', E.DATA) AS INTEGER) = 7) AS 'Jul',
                       (SELECT
                         SUM(VALOR)
                       FROM TbEntrada E
-                      WHERE E.IDCAT = CE.ID
+                      WHERE E.IDCAT_ENTRADA = CE.ID
                       AND E.IDMEMBRO = @IDMEMBRO
                       AND CAST(STRFTIME('%Y', E.DATA) AS INTEGER) = @ANO
                       AND CAST(STRFTIME('%m', E.DATA) AS INTEGER) = 8) AS 'Ago',
                       (SELECT
                         SUM(VALOR)
                       FROM TbEntrada E
-                      WHERE E.IDCAT = CE.ID
+                      WHERE E.IDCAT_ENTRADA = CE.ID
                       AND E.IDMEMBRO = @IDMEMBRO
                       AND CAST(STRFTIME('%Y', E.DATA) AS INTEGER) = @ANO
                       AND CAST(STRFTIME('%m', E.DATA) AS INTEGER) = 9) AS 'Set',
                       (SELECT
                         SUM(VALOR)
                       FROM TbEntrada E
-                      WHERE E.IDCAT = CE.ID
+                      WHERE E.IDCAT_ENTRADA = CE.ID
                       AND E.IDMEMBRO = @IDMEMBRO
                       AND CAST(STRFTIME('%Y', E.DATA) AS INTEGER) = @ANO
                       AND CAST(STRFTIME('%m', E.DATA) AS INTEGER) = 10) AS 'Out',
                       (SELECT
                         SUM(VALOR)
                       FROM TbEntrada E
-                      WHERE E.IDCAT = CE.ID
+                      WHERE E.IDCAT_ENTRADA = CE.ID
                       AND E.IDMEMBRO = @IDMEMBRO
                       AND CAST(STRFTIME('%Y', E.DATA) AS INTEGER) = @ANO
                       AND CAST(STRFTIME('%m', E.DATA) AS INTEGER) = 11) AS 'Nov',
                       (SELECT
                         SUM(VALOR)
                       FROM TbEntrada E
-                      WHERE E.IDCAT = CE.ID
+                      WHERE E.IDCAT_ENTRADA = CE.ID
                       AND E.IDMEMBRO = @IDMEMBRO
                       AND CAST(STRFTIME('%Y', E.DATA) AS INTEGER) = @ANO
                       AND CAST(STRFTIME('%m', E.DATA) AS INTEGER) = 12) AS 'Dez',
                       (SELECT
                         SUM(VALOR)
                       FROM TbEntrada E
-                      WHERE E.IDCAT = CE.ID
+                      WHERE E.IDCAT_ENTRADA = CE.ID
                       AND E.IDMEMBRO = @IDMEMBRO
                       AND CAST(STRFTIME('%Y', E.DATA) AS INTEGER) = @ANO) as 'Total'
-                    FROM TbCatEntrada CE ORDER BY CATEGORIA";
+                    FROM TbCat_Entrada CE ORDER BY CATEGORIA";
 
             SQLiteCommand cmd = new SQLiteCommand(strSql, con);
             cmd.Parameters.AddWithValue("@ANO", ano);

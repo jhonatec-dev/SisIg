@@ -65,10 +65,10 @@ namespace ControleFinanceiroIgreja.GUI
             nome = txtPesquisa.Text.TrimStart().TrimEnd();
 
             if (cbEstadoCivil.SelectedIndex > 0)
-                estadoCivil = " AND ESTADOCIVIL = '" + cbEstadoCivil.Text + "' ";
+                estadoCivil = " AND [ESTADO CIVIL] = '" + cbEstadoCivil.Text + "' ";
 
             if (cbSituacao.SelectedIndex > 0)
-                situacao = " AND SITUACAO = '" + listStatus[cbSituacao.SelectedIndex - 1].desc + "' ";
+                situacao = " AND SITUAÇÃO = '" + listStatus[cbSituacao.SelectedIndex - 1].desc + "' ";
 
             if (boolInativos)
                 inativo = "";
