@@ -118,7 +118,7 @@ DtNiver between @DTINI AND @DTFIM
             vi.dtnasc = DateTime.Parse(dt.Rows[0]["DtNasc"].ToString());
             vi.sexo = dt.Rows[0]["SEXO"].ToString();
             vi.dtCasamento = dt.Rows[0]["DtCasamento"].ToString();
-            vi.estadoCivil = dt.Rows[0]["EstadoCivil"].ToString().Trim();
+            vi.estadoCivil = dt.Rows[0]["Estado_Civil"].ToString().Trim();
             vi.endereco = dt.Rows[0]["Endereco"].ToString();
             vi.bairro = dt.Rows[0]["Bairro"].ToString();
             vi.cidade = dt.Rows[0]["Cidade"].ToString();
@@ -128,7 +128,7 @@ DtNiver between @DTINI AND @DTFIM
             vi.tel2 = dt.Rows[0]["Tel2"].ToString();
             vi.email = dt.Rows[0]["Email"].ToString();
             vi.profissao = dt.Rows[0]["Profissao"].ToString();
-            vi.localNascimento = dt.Rows[0]["LocalNascimento"].ToString();
+            vi.localNascimento = dt.Rows[0]["Local_Nascimento"].ToString();
 
             vi.obs = dt.Rows[0]["Obs"].ToString();
 
@@ -143,11 +143,11 @@ DtNiver between @DTINI AND @DTFIM
             if (vi.id == 0)
             {
                 strSql = @"INSERT INTO TbVisitantes (NOME, DTNASC, SEXO, ENDERECO, BAIRRO, CIDADE, CEP, UF, 
-                            TEL1, TEL2, EMAIL, DTCASAMENTO, ESTADOCIVIL, 
-                            OBS, PROFISSAO, LOCALNASCIMENTO)
+                            TEL1, TEL2, EMAIL, DTCASAMENTO, ESTADO_CIVIL, 
+                            OBS, PROFISSAO, LOCAL_NASCIMENTO)
       VALUES (@NOME, @DTNASC, @SEXO, @ENDERECO, @BAIRRO, @CIDADE, @CEP, @UF, 
-            @TEL1, @TEL2, @EMAIL, @DTCASAMENTO, @EstadoCivil, 
-            @Obs, @Profissao, @LocalNascimento)";
+            @TEL1, @TEL2, @EMAIL, @DTCASAMENTO, @Estado_Civil, 
+            @Obs, @Profissao, @Local_Nascimento)";
             }
             else
             {
@@ -164,10 +164,10 @@ DtNiver between @DTINI AND @DTFIM
         CEP = @CEP,
         UF = @UF,
         DTCASAMENTO = @DTCASAMENTO,
-        ESTADOCIVIL = @EstadoCivil,
+        ESTADO_CIVIL = @EstadoCivil,
         OBS = @Obs,
         PROFISSAO = @Profissao,
-        LOCALNASCIMENTO = @LocalNascimento
+        LOCAL_NASCIMENTO = @LocalNascimento
     WHERE ID = @ID";
             }
 
@@ -185,9 +185,9 @@ DtNiver between @DTINI AND @DTFIM
             cmd.Parameters.AddWithValue("@UF", vi.uf);
             cmd.Parameters.AddWithValue("@TEL1", vi.tel1);
             cmd.Parameters.AddWithValue("@TEL2", vi.tel2);
-            cmd.Parameters.AddWithValue("@ESTADOCIVIL", vi.estadoCivil);
+            cmd.Parameters.AddWithValue("@ESTADO_CIVIL", vi.estadoCivil);
             cmd.Parameters.AddWithValue("@OBS", vi.obs);
-            cmd.Parameters.AddWithValue("@LOCALNASCIMENTO", vi.localNascimento);
+            cmd.Parameters.AddWithValue("@LOCAL_NASCIMENTO", vi.localNascimento);
             cmd.Parameters.AddWithValue("@PROFISSAO", vi.profissao);
 
             if (vi.dtCasamento == null)
