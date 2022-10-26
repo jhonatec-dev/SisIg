@@ -15,7 +15,7 @@ namespace ControleFinanceiroIgreja.DAO
 
             string strSql = " SELECT Id, Descricao, Membro, DtInicio as 'Inicio', DtFim as 'Fim' " +
 
-                            " from VwCargosOcupados" +
+                            " from VwCargos_Ocupados" +
                               (ano > 0 ? " WHERE @ANO BETWEEN CAST(STRFTIME('%Y', dtINICIO) AS INTEGER) AND CAST(STRFTIME('%Y', DTFIM) AS INTEGER)" : " ");
             SQLiteCommand cmd = new SQLiteCommand(strSql, con);
             cmd.Parameters.AddWithValue("@ANO", ano);
@@ -36,7 +36,7 @@ namespace ControleFinanceiroIgreja.DAO
             CargoMembro co = new CargoMembro();
 
             string strSql = " SELECT * " +
-                                " FROM TbCargoMembro WHERE ID = @ID ";
+                                " FROM TbCargo_Membro WHERE ID = @ID ";
             SQLiteCommand cmd = new SQLiteCommand(strSql);
             cmd.Parameters.AddWithValue("@ID", id);
             cmd.Connection = con;
@@ -66,12 +66,12 @@ namespace ControleFinanceiroIgreja.DAO
 
             if(co.id == 0)
             {
-                strSql = @"INSERT INTO TbCargoMembro (IdCargo, IdMembro, DtInicio, DtFim)
+                strSql = @"INSERT INTO TbCargo_Membro (IdCargo, IdMembro, DtInicio, DtFim)
                                 VALUES (@IDCARGO, @IDMEMBRO, @DTINICIO, @DTFIM)";
             }
             else
             {
-                strSql = @"UPDATE TbCargoMembro
+                strSql = @"UPDATE TbCargo_Membro
                             SET IdCargo = @IDCARGO,
                                 IdMembro = @IDMEMBRO,
                                 DtInicio = @DTINICIO,
@@ -95,7 +95,7 @@ namespace ControleFinanceiroIgreja.DAO
         public void removeCargo(SQLiteConnection con, int id)
         {
 
-            string strSql = @"DELETE FROM TbCargoMembro 		
+            string strSql = @"DELETE FROM TbCargo_Membro 		
                                 WHERE IdCargo = @ID;  	
                                 DELETE FROM TbCargo 		
                                 WHERE ID = @ID ";
@@ -112,7 +112,7 @@ namespace ControleFinanceiroIgreja.DAO
         {
 
 
-            string strSql = " SELECT Id, [Desc] as 'Descricao'" +
+            string strSql = " SELECT Id, DESCRICAO as 'Descrição'" +
                             " from TbCargo";
             SQLiteCommand cmd = new SQLiteCommand(strSql, con);
             SQLiteDataAdapter da = new SQLiteDataAdapter();
@@ -133,13 +133,13 @@ namespace ControleFinanceiroIgreja.DAO
 
             if(ca.id ==0 )
             {
-                strSql = @"INSERT INTO TbCargo ([Desc])
+                strSql = @"INSERT INTO TbCargo (DESCRICAO)
                                 VALUES (@DESC)";
             }
             else
             {
                 strSql = @" UPDATE TbCargo
-                            SET [Desc] = @DESC
+                            SET DESCRICAO = @DESCRICAO
                             WHERE ID = @ID";
             }
 
@@ -147,14 +147,14 @@ namespace ControleFinanceiroIgreja.DAO
             SQLiteCommand cmd = new SQLiteCommand(strSql, con);
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.AddWithValue("@ID", ca.id);
-            cmd.Parameters.AddWithValue("@DESC", ca.desc);
+            cmd.Parameters.AddWithValue("@DESCRICAO", ca.desc);
 
             cmd.ExecuteNonQuery();
         }
 
         public void removeCargoOcupado(SQLiteConnection con, int id)
         {
-            SQLiteCommand cmd = new SQLiteCommand("DELETE FROM TBCargoMembro WHERE ID = " + id, con);
+            SQLiteCommand cmd = new SQLiteCommand("DELETE FROM TBCargo_Membro WHERE ID = " + id, con);
             cmd.CommandType = CommandType.Text;
 
 

@@ -42,6 +42,9 @@ Aplicativo desktop para auxiliar igrejas pequenas no seu controle financeiro e s
 
 ## Visitantes
 
+- Cadastro completo
+- Visitas recebidas/realizadas
+- Aniversariantes (nascimento e casamento)
 
 ## Cargos
 
