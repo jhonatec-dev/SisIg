@@ -141,7 +141,7 @@ namespace ControleFinanceiroIgreja.GUI
             Cargo ca = new Cargo();
 
             ca.id = Convert.ToInt32(dtgCargos.SelectedRows[0].Cells["ID"].Value);
-            ca.desc = dtgCargos.SelectedRows[0].Cells["Descricao"].Value.ToString();
+            ca.desc = dtgCargos.SelectedRows[0].Cells["Descrição"].Value.ToString();
 
 
 
@@ -201,7 +201,7 @@ namespace ControleFinanceiroIgreja.GUI
             if (dtgCargos.SelectedRows.Count == 0)
                 return;
 
-            string desc = dtgCargos.SelectedRows[0].Cells["Descricao"].Value.ToString();
+            string desc = dtgCargos.SelectedRows[0].Cells["Descrição"].Value.ToString();
 
             if (MessageBox.Show("Deseja remover o cargo '" + desc + "'?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {

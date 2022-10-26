@@ -56,7 +56,7 @@ namespace ControleFinanceiroIgreja.GUI
 
             cbCargos.DataSource = dt;
 
-            cbCargos.DisplayMember = "Descricao";
+            cbCargos.DisplayMember = "Descrição";
             cbCargos.ValueMember = "ID";
 
 
@@ -210,6 +210,11 @@ namespace ControleFinanceiroIgreja.GUI
             string displayValue = cbCargos.GetItemText(cbCargos.Items[e.Index]);
             e.Graphics.DrawString(displayValue, e.Font, brush, e.Bounds, StringFormat.GenericDefault);
             e.DrawFocusRectangle();
+        }
+
+        private void cbCargos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

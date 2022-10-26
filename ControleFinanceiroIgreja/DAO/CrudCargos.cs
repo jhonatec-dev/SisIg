@@ -134,7 +134,7 @@ namespace ControleFinanceiroIgreja.DAO
             if(ca.id ==0 )
             {
                 strSql = @"INSERT INTO TbCargo (DESCRICAO)
-                                VALUES (@DESC)";
+                                VALUES (@DESCRICAO)";
             }
             else
             {

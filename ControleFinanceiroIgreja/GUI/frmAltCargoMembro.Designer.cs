@@ -103,6 +103,7 @@
             this.cbCargos.Size = new System.Drawing.Size(494, 27);
             this.cbCargos.TabIndex = 0;
             this.cbCargos.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.cbCargos_DrawItem);
+            this.cbCargos.SelectedIndexChanged += new System.EventHandler(this.cbCargos_SelectedIndexChanged);
             this.cbCargos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbMembro_KeyPress);
             // 
             // label1

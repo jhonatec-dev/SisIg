@@ -1,6 +1,11 @@
-# ControleFinanceiroIgreja
+# SisIg - Sistemas Para Igrejas
 
-Aplicativo desktop para auxiliar igrejas pequenas no seu controle financeiro e secretaria
+Aplicativo desktop para auxiliar igrejas pequenas no seu controle financeiro e secretaria.
+Iniciei este projeto em 2016 para atender a demanda de minha congregação. E mesmo sozinho, resolvi desenvolver do zero este sistema que seria capaz de funcionar sem SGBD na máquina Windows com compatibilidade em tablets Windows. Agora, em outubro de 2022 resolvi resgatar o projeto para disponibilizar para devs da minha cidade poderem estudar em um projeto que foi utilizado e ainda tem uma congregação da cidade utilizando.
+
+Ainda estou no processo de Engenharia reversa da base de dados, uma vez que construí usando SQLite Studio, mas não encontrei o arquivo database. Algumas funções podem não estar disponíveis quando você executar, mas estou trabalhando rapidamente para liberar tudo em tempo hábil e só depois começarei a atualizar as interações nos forms e tratar o visual não muito ergonômico que adotei na época kkk.
+
+Sinta-se livre para contribuir, eu estou mantendo o projeto na íntegra (incluindo dlls, objs e a pasta do debug para você abrir o .exe direto e testar as funcionalidade sem o VS) e estou à disposição para aprender com vocês aqui!
 
 - Entradas e Saídas
 - Lista de Membros
@@ -48,9 +53,14 @@ Aplicativo desktop para auxiliar igrejas pequenas no seu controle financeiro e s
 
 ## Cargos
 
+- Lista de Cargos
+- Atribuir um cargo à um membro e definir data de início/fim
+
 
 ## Aniversariantes
 
+- Lista de Aniversariantes da semana/mês/ano
+- Tanto de membros quanto de aniversariantes
 
 
 
